@@ -1,0 +1,23 @@
+:root {
+  /* TODO: Substituir pelas cores oficiais da identidade visual da CONECTA */
+  --color-primary: #1E5F3A;   /* verde escuro */
+  --color-secondary: #4CAF50; /* verde claro */
+  --color-accent: #FF8000;    /* laranja */
+  --color-bg: #FFFFFF;
+  --color-text: #0F172A;
+  --color-text-light: #64748B;
+  --color-border: #E2E8F0;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+}
+
+/* Dark mode support (opcional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0F172A;
+    --color-text: #F8FAFC;
+    --color-text-light: #94A3B8;
+    --color-border: #334155;
+  }
+} 
