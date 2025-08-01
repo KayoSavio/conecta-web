@@ -9,13 +9,25 @@
     <!-- 3. Nossa Abordagem Única -->
     <UniqueApproach />
     
-    <!-- 4. Funcionalidades Principais -->
+    <!-- 4. Processo em 4 Etapas -->
+    <ProcessSteps />
+    
+    <!-- 5. AGROFLORESTAS CL -->
+    <AgroforestryCL />
+    
+    <!-- 6. OS COBENEFÍCIOS INCLUEM -->
+    <Cobenefits />
+    
+    <!-- 7. Funcionalidades Principais -->
     <!-- <KeyActivities /> -->
     
-    <!-- 5. Benefícios -->
+    <!-- 8. Benefícios -->
     <Benefits />
     
-    <!-- 6. Monetização -->
+    <!-- 9. Formulário de Simulação -->
+    <SimulationForm />
+    
+    <!-- 10. Monetização -->
     <Monetization />
     
     <!-- 7. Testimonials -->
@@ -33,8 +45,12 @@
 import Hero from '@/pages/sections/Hero.vue'
 import WhoWeServe from '@/pages/sections/WhoWeServe.vue'
 import UniqueApproach from '@/pages/sections/UniqueApproach.vue'
+import ProcessSteps from '@/pages/sections/ProcessSteps.vue'
+import AgroforestryCL from '@/pages/sections/AgroforestryCL.vue'
+import Cobenefits from '@/pages/sections/Cobenefits.vue'
 import KeyActivities from '@/pages/sections/KeyActivities.vue'
 import Benefits from '@/pages/sections/Benefits.vue'
+import SimulationForm from '@/pages/sections/SimulationForm.vue'
 import Monetization from '@/pages/sections/Monetization.vue'
 import Testimonials from '@/pages/sections/Testimonials.vue'
 import FinalCTA from '@/pages/sections/FinalCTA.vue'
