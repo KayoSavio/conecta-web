@@ -33,4 +33,21 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-primary',
+    'bg-secondary', 
+    'bg-accent',
+    'text-primary',
+    'text-secondary',
+    'text-accent',
+    'border-primary',
+    'border-secondary',
+    'border-accent',
+    'hover:bg-primary',
+    'hover:bg-secondary',
+    'hover:bg-accent',
+    'hover:text-primary',
+    'hover:text-secondary',
+    'hover:text-accent',
+  ]
 } 

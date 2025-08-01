@@ -1,28 +1,28 @@
 <template>
   <div class="min-h-screen">
-    <!-- Hero Section -->
+    <!-- 1. Hero Section -->
     <Hero />
     
-    <!-- About Section -->
-    <About />
+    <!-- 2. Para quem é a plataforma? -->
+    <WhoWeServe />
     
-    <!-- Services Section -->
-    <Services />
+    <!-- 3. Nossa Abordagem Única -->
+    <UniqueApproach />
     
-    <!-- Benefits Section -->
+    <!-- 4. Funcionalidades Principais -->
+    <!-- <KeyActivities /> -->
+    
+    <!-- 5. Benefícios -->
     <Benefits />
     
-    <!-- How It Works Section -->
-    <HowItWorks />
+    <!-- 6. Monetização -->
+    <Monetization />
     
-    <!-- Testimonials Section -->
+    <!-- 7. Testimonials -->
     <Testimonials />
     
-    <!-- CTA Section -->
-    <CTA />
-    
-    <!-- Contact Section -->
-    <Contact />
+    <!-- 8. Call to Action Final -->
+    <FinalCTA />
     
     <!-- Footer -->
     <FooterInfo />
@@ -31,12 +31,42 @@
 
 <script setup lang="ts">
 import Hero from '@/pages/sections/Hero.vue'
-import About from '@/pages/sections/About.vue'
-import Services from '@/pages/sections/Services.vue'
+import WhoWeServe from '@/pages/sections/WhoWeServe.vue'
+import UniqueApproach from '@/pages/sections/UniqueApproach.vue'
+import KeyActivities from '@/pages/sections/KeyActivities.vue'
 import Benefits from '@/pages/sections/Benefits.vue'
-import HowItWorks from '@/pages/sections/HowItWorks.vue'
+import Monetization from '@/pages/sections/Monetization.vue'
 import Testimonials from '@/pages/sections/Testimonials.vue'
-import CTA from '@/pages/sections/CTA.vue'
-import Contact from '@/pages/sections/Contact.vue'
+import FinalCTA from '@/pages/sections/FinalCTA.vue'
 import FooterInfo from '@/pages/sections/FooterInfo.vue'
-</script> 
+</script>
+
+<style scoped>
+/* Smooth transitions between sections */
+section {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style> 

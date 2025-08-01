@@ -1,8 +1,8 @@
 :root {
-  /* TODO: Substituir pelas cores oficiais da identidade visual da CONECTA */
-  --color-primary: #1E5F3A;   /* verde escuro */
-  --color-secondary: #4CAF50; /* verde claro */
-  --color-accent: #FF8000;    /* laranja */
+  /* Cores oficiais da CONECTA */
+  --color-primary: #5c984c;   /* verde principal */
+  --color-secondary: #b1d256; /* verde secundário */
+  --color-accent: #d0e18a;    /* verde claro */
   --color-bg: #FFFFFF;
   --color-text: #0F172A;
   --color-text-light: #64748B;

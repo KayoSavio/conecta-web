@@ -1,123 +1,128 @@
 <template>
-  <section class="section-padding">
+  <section id="servicos" class="section-padding">
     <div class="container-custom">
       <!-- Header -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
-          <!-- TODO: Substituir pelo título oficial -->
+        <h2 
+          v-motion="motionPresets.fadeInUp"
+          class="text-3xl md:text-4xl font-bold text-white mb-4"
+        >
           Nossos Serviços
         </h2>
-        <p class="text-xl text-text-light max-w-3xl mx-auto">
-          <!-- TODO: Substituir pelo subtítulo oficial -->
+        <p 
+          v-motion="motionPresets.fadeInUp"
+          :delay="100"
+          class="text-xl text-gray-300 max-w-3xl mx-auto"
+        >
           Soluções completas para impulsionar seu negócio e conectar você ao futuro
         </p>
       </div>
       
       <!-- Services Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service Card 1 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
+        <!-- Service Card 1: Consultoria Estratégica -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="200"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 border-2 border-primary/20">
+            <Icon icon="mdi:lightbulb-on" class="w-8 h-8 text-primary" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo nome do serviço -->
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
             Consultoria Estratégica
           </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do serviço -->
+          <p class="text-gray-800 leading-relaxed">
             Análise profunda do seu negócio para identificar oportunidades 
             de crescimento e otimização de processos.
           </p>
         </div>
         
-        <!-- Service Card 2 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+        <!-- Service Card 2: Transformação Digital -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="300"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 border-2 border-secondary/20">
+            <Icon icon="mdi:laptop" class="w-8 h-8 text-secondary" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo nome do serviço -->
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
             Transformação Digital
           </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do serviço -->
+          <p class="text-gray-800 leading-relaxed">
             Modernização completa dos processos empresariais com 
             tecnologias inovadoras e soluções digitais.
           </p>
         </div>
         
-        <!-- Service Card 3 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
+        <!-- Service Card 3: Otimização de Performance -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="400"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-6 border-2 border-accent/20">
+            <Icon icon="mdi:speedometer" class="w-8 h-8 text-accent" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo nome do serviço -->
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
             Otimização de Performance
           </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do serviço -->
+          <p class="text-gray-800 leading-relaxed">
             Melhoria significativa na eficiência operacional e 
             aumento da produtividade da sua empresa.
           </p>
         </div>
         
-        <!-- Service Card 4 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
+        <!-- Service Card 4: Gestão de Projetos -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="500"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 border-2 border-primary/20">
+            <Icon icon="mdi:clipboard-check" class="w-8 h-8 text-primary" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo nome do serviço -->
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
             Gestão de Projetos
           </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do serviço -->
+          <p class="text-gray-800 leading-relaxed">
             Coordenação completa de projetos com metodologias 
             ágeis e acompanhamento detalhado de resultados.
           </p>
         </div>
         
-        <!-- Service Card 5 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
+        <!-- Service Card 5: Análise de Dados -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="600"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 border-2 border-secondary/20">
+            <Icon icon="mdi:chart-box" class="w-8 h-8 text-secondary" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo nome do serviço -->
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
             Análise de Dados
           </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do serviço -->
+          <p class="text-gray-800 leading-relaxed">
             Extração de insights valiosos através de análise 
             avançada de dados e business intelligence.
           </p>
         </div>
         
-        <!-- Service Card 6 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
+        <!-- Service Card 6: Treinamento Corporativo -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="700"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-6 border-2 border-accent/20">
+            <Icon icon="mdi:school" class="w-8 h-8 text-accent" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo nome do serviço -->
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
             Treinamento Corporativo
           </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do serviço -->
+          <p class="text-gray-800 leading-relaxed">
             Desenvolvimento de equipes através de programas 
             personalizados de capacitação e treinamento.
           </p>
@@ -128,5 +133,8 @@
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue'
+import { motionPresets } from '@/plugins/motion'
+
 // Seção Services da CONECTA
 </script> 

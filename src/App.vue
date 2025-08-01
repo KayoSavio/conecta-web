@@ -1,10 +1,16 @@
 <template>
   <div id="app" class="min-h-screen bg-bg text-text">
-    <router-view />
+    <Header />
+    <RouterView v-slot="{ Component }">
+      <transition name="page" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </RouterView>
   </div>
 </template>
 
 <script setup lang="ts">
+import Header from '@/components/Header.vue'
 // Componente principal da aplicação
 </script>
 

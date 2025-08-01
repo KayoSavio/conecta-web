@@ -1,126 +1,103 @@
 <template>
-  <section class="section-padding bg-gray-50">
+  <section id="beneficios" class="section-padding bg-gray-50">
     <div class="container-custom">
       <!-- Header -->
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
-          <!-- TODO: Substituir pelo título oficial -->
-          Por que escolher a CONECTA?
+        <h2 
+          v-motion="motionPresets.fadeInUp"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6"
+        >
+          Por que mais de 500 clientes confiam na CONECTA?
         </h2>
-        <p class="text-xl text-text-light max-w-3xl mx-auto">
-          <!-- TODO: Substituir pelo subtítulo oficial -->
-          Descubra os diferenciais que fazem da CONECTA a escolha certa para seu negócio
+        <p 
+          v-motion="motionPresets.fadeInUp"
+          :delay="100"
+          class="text-xl text-gray-600 max-w-3xl mx-auto"
+        >
+          Benefícios exclusivos que transformam a gestão ambiental em um processo simples e eficiente
         </p>
       </div>
-      
+
       <!-- Benefits Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Benefit 1 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Segurança -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="200"
+          class="group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+            <Icon icon="mdi:shield-check" class="w-8 h-8 text-green-600" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo benefício -->
-            Experiência Comprovada
-          </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do benefício -->
-            Mais de 10 anos de experiência no mercado com 
-            centenas de projetos entregues com sucesso.
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Segurança Total</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Dados protegidos com criptografia de ponta e conformidade com LGPD. Sua informação está segura conosco.
           </p>
         </div>
-        
-        <!-- Benefit 2 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
+
+        <!-- Eficiência -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="300"
+          class="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors duration-300">
+            <Icon icon="mdi:rocket-launch" class="w-8 h-8 text-blue-600" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo benefício -->
-            Equipe Especializada
-          </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do benefício -->
-            Profissionais certificados e altamente qualificados 
-            para atender às necessidades específicas do seu negócio.
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Máxima Eficiência</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Processos automatizados que reduzem tempo e custos. Resultados rápidos sem complicações.
           </p>
         </div>
-        
-        <!-- Benefit 3 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
+
+        <!-- Tecnologia -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="400"
+          class="group bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors duration-300">
+            <Icon icon="mdi:satellite-variant" class="w-8 h-8 text-purple-600" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo benefício -->
-            Resultados Garantidos
-          </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do benefício -->
-            Metodologias comprovadas que garantem resultados 
-            mensuráveis e ROI positivo para sua empresa.
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Tecnologia Avançada</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Monitoramento via satélite e IA para precisão máxima. Tecnologia de ponta ao seu alcance.
           </p>
         </div>
-        
-        <!-- Benefit 4 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
+
+        <!-- Atendimento -->
+        <div 
+          v-motion="motionPresets.fadeInUp"
+          :delay="500"
+          class="group bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+        >
+          <div class="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/30 transition-colors duration-300">
+            <Icon icon="mdi:account-tie" class="w-8 h-8 text-orange-600" />
           </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo benefício -->
-            Suporte Contínuo
-          </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do benefício -->
-            Acompanhamento completo durante e após a implementação 
-            para garantir o sucesso do seu projeto.
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Atendimento Personalizado</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Suporte especializado com consultores experientes. Estamos aqui para ajudar em cada etapa do processo.
           </p>
         </div>
-        
-        <!-- Benefit 5 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo benefício -->
-            Soluções Personalizadas
-          </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do benefício -->
-            Cada projeto é único e desenvolvido especificamente 
-            para atender às necessidades do seu negócio.
+      </div>
+
+      <!-- CTA Section -->
+      <div 
+        v-motion="motionPresets.fadeInUp"
+        :delay="800"
+        class="mt-16 text-center"
+      >
+        <div class="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-white">
+          <h3 class="text-2xl font-bold mb-4">Pronto para experimentar?</h3>
+          <p class="text-white/90 mb-6 max-w-2xl mx-auto">
+            Junte-se aos mais de 500 clientes que já confiam na CONECTA para suas necessidades ambientais.
           </p>
-        </div>
-        
-        <!-- Benefit 6 -->
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-text mb-4">
-            <!-- TODO: Substituir pelo benefício -->
-            Agilidade na Entrega
-          </h3>
-          <p class="text-text-light leading-relaxed">
-            <!-- TODO: Substituir pela descrição do benefício -->
-            Metodologias ágeis que garantem entregas rápidas 
-            sem comprometer a qualidade dos resultados.
-          </p>
+          <button 
+            @click="openWhatsApp"
+            class="bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+          >
+            Comece Agora
+          </button>
         </div>
       </div>
     </div>
@@ -128,5 +105,12 @@
 </template>
 
 <script setup lang="ts">
-// Seção Benefits da CONECTA
+import { Icon } from '@iconify/vue'
+import { motionPresets } from '@/plugins/motion'
+
+const openWhatsApp = () => {
+  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
+  const message = encodeURIComponent('Olá! Gostaria de conhecer os benefícios da plataforma CONECTA.')
+  window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
+}
 </script> 
