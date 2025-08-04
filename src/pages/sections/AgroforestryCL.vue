@@ -1,15 +1,17 @@
 <template>
   <section class="section-padding relative overflow-hidden">
-    <!-- Background com textura de árvore -->
+    <!-- Background com textura do solo com plantas -->
     <div class="absolute inset-0">
       <img 
-        src="/src/assets/images/texture.jpg" 
-        alt="Textura de árvore" 
-        class="w-full h-full object-cover opacity-40"
+        src="https://img.freepik.com/fotos-gratis/textura-do-solo-com-plantas_23-2147625797.jpg" 
+        alt="Textura do solo com plantas" 
+        class="w-full h-full object-cover opacity-30"
+        loading="lazy"
+        decoding="async"
       />
     </div>
     <!-- Overlay sutil para melhorar contraste -->
-    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute inset-0 bg-green-500/20"></div>
     
     <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">

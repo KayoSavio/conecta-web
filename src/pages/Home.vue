@@ -18,16 +18,19 @@
     <!-- 6. OS COBENEFÍCIOS INCLUEM -->
     <Cobenefits />
     
-    <!-- 7. Funcionalidades Principais -->
+    <!-- 7. MATA ATLÂNTICA -->
+    <MataAtlantica />
+    
+    <!-- 8. Funcionalidades Principais -->
     <!-- <KeyActivities /> -->
     
-    <!-- 8. Benefícios -->
+    <!-- 9. Benefícios -->
     <Benefits />
     
-    <!-- 9. Formulário de Simulação -->
+    <!-- 10. Formulário de Simulação -->
     <SimulationForm />
     
-    <!-- 10. Monetização -->
+    <!-- 11. Monetização -->
     <Monetization />
     
     
@@ -47,6 +50,7 @@ import UniqueApproach from '@/pages/sections/UniqueApproach.vue'
 import ProcessSteps from '@/pages/sections/ProcessSteps.vue'
 import AgroforestryCL from '@/pages/sections/AgroforestryCL.vue'
 import Cobenefits from '@/pages/sections/Cobenefits.vue'
+import MataAtlantica from '@/pages/sections/MataAtlantica.vue'
 import KeyActivities from '@/pages/sections/KeyActivities.vue'
 import Benefits from '@/pages/sections/Benefits.vue'
 import SimulationForm from '@/pages/sections/SimulationForm.vue'

@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
+    "@vitejs/plugin-vue": "^4.5.0",
     "@vueuse/motion": "^3.0.3",
     "gsap": "^3.13.0",
-    "vue": "^3.4.0",
-    "vue-router": "^4.2.5",
     "vite": "^5.0.0",
-    "@vitejs/plugin-vue": "^4.5.0"
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
