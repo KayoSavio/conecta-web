@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding bg-white">
+  <section id="simulacao" class="section-padding bg-white">
     <div class="container-custom">
       <div class="max-w-6xl mx-auto">
         <!-- Título -->
@@ -55,134 +55,196 @@
             class="bg-white flex items-center"
           >
             <form @submit.prevent="handleSubmit" class="space-y-4">
-              <!-- Tipo de Interesse -->
-              <select
-                v-model="formData.tipoInteresse"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                required
-              >
-                <option value="" disabled selected>Tipo de Interesse</option>
-                <option value="vender">Vender área</option>
-                <option value="comprar">Comprar área</option>
-              </select>
+              <!-- Primeira linha: Tipo de Interesse (2 colunas) e Objetivo do Crédito (2 colunas) -->
+              <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-2">
+                                     <select
+                     v-model="formData.tipoInteresse"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     required
+                   >
+                    <option value="" disabled selected>Tipo de Interesse</option>
+                    <option value="vender">Vender área</option>
+                    <option value="comprar">Comprar área</option>
+                  </select>
+                </div>
+                <div class="col-span-2">
+                                     <select
+                     v-model="formData.objetivoCredito"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   >
+                    <option value="" disabled selected>Objetivo do Crédito</option>
+                    <option value="compensacao">Compensação ambiental</option>
+                    <option value="comercializacao">Comercialização</option>
+                  </select>
+                </div>
+              </div>
 
-              <!-- Objetivo do Crédito -->
-              <select
-                v-model="formData.objetivoCredito"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              >
-                <option value="" disabled selected>Objetivo do Crédito</option>
-                <option value="compensacao">Compensação ambiental</option>
-                <option value="comercializacao">Comercialização</option>
-              </select>
+              <!-- Segunda linha: Nome completo (4 colunas) -->
+              <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-4">
+                                     <input
+                     v-model="formData.nomeCompleto"
+                     type="text"
+                     placeholder="Nome completo"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     required
+                   />
+                </div>
+              </div>
 
-              <!-- Nome completo -->
-              <input
-                v-model="formData.nomeCompleto"
-                type="text"
-                placeholder="Nome completo"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                required
-              />
+              <!-- Terceira linha: E-mail (2 colunas) e Telefone (2 colunas) -->
+              <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-2">
+                                     <input
+                     v-model="formData.email"
+                     type="email"
+                     placeholder="E-mail"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     required
+                   />
+                </div>
+                <div class="col-span-2">
+                                     <input
+                     v-model="formData.telefone"
+                     type="text"
+                     placeholder="Telefone (WhatsApp)"
+                     maxlength="15"
+                     @input="formatTelefone"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     required
+                   />
+                </div>
+              </div>
 
-              <!-- E-mail -->
-              <input
-                v-model="formData.email"
-                type="email"
-                placeholder="E-mail"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                required
-              />
+              <!-- Quarta linha: Tamanho da Área (2 colunas) e Número do CAR (2 colunas) -->
+              
 
-              <!-- Telefone -->
-              <input
-                v-model="formData.telefone"
-                type="text"
-                placeholder="Telefone (WhatsApp)"
-                maxlength="15"
-                @input="formatTelefone"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                required
-              />
+                             
+               <div class="grid grid-cols-6 gap-4">
+                 
+                                   <div class="col-span-2 relative">
+                    <input
+                      v-model="formData.cep"
+                      type="text"
+                      placeholder="CEP"
+                      maxlength="9"
+                      @input="formatCep"
+                      :disabled="isLoadingCep"
+                      class="w-full px-4 py-4 pr-12 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200 disabled:opacity-50"
+                    />
+                    <div v-if="isLoadingCep" class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                      <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-500"></div>
+                    </div>
+                  </div>
+                 <div class="col-span-2">
+                                     <input
+                     v-model="formData.tamanhoArea"
+                     type="number"
+                     min="0"
+                     step="0.01"
+                     placeholder="Área (hectare)"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                </div>
+                <div class="col-span-2">
+                                     <input
+                     v-model="formData.numeroCar"
+                     type="text"
+                     placeholder="CAR (opcional)"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                </div>
+               </div>
 
-              <!-- Tamanho da Área -->
-              <input
-                v-model="formData.tamanhoArea"
-                type="number"
-                min="0"
-                step="0.01"
-                placeholder="Tamanho da área (hectares)"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              />
+               <!-- Sexta linha: Cidade (4 colunas) -->
+               <div class="grid grid-cols-4 gap-4">
+                 <div class="col-span-2">
+                   <input
+                     v-model="formData.cidade"
+                     type="text"
+                     placeholder="Cidade"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                 </div>
+                 <div class="col-span-2">
+                   <select
+                     v-model="formData.estado"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   >
+                     <option value="" disabled selected>Estado</option>
+                     <option value="AC">Acre</option>
+                     <option value="AL">Alagoas</option>
+                     <option value="AP">Amapá</option>
+                     <option value="AM">Amazonas</option>
+                     <option value="BA">Bahia</option>
+                     <option value="CE">Ceará</option>
+                     <option value="DF">Distrito Federal</option>
+                     <option value="ES">Espírito Santo</option>
+                     <option value="GO">Goiás</option>
+                     <option value="MA">Maranhão</option>
+                     <option value="MT">Mato Grosso</option>
+                     <option value="MS">Mato Grosso do Sul</option>
+                     <option value="MG">Minas Gerais</option>
+                     <option value="PA">Pará</option>
+                     <option value="PB">Paraíba</option>
+                     <option value="PR">Paraná</option>
+                     <option value="PE">Pernambuco</option>
+                     <option value="PI">Piauí</option>
+                     <option value="RJ">Rio de Janeiro</option>
+                     <option value="RN">Rio Grande do Norte</option>
+                     <option value="RS">Rio Grande do Sul</option>
+                     <option value="RO">Rondônia</option>
+                     <option value="RR">Roraima</option>
+                     <option value="SC">Santa Catarina</option>
+                     <option value="SP">São Paulo</option>
+                     <option value="SE">Sergipe</option>
+                     <option value="TO">Tocantins</option>
+                   </select>
+                 </div>
+               </div>
 
-              <!-- Número do CAR -->
-              <input
-                v-model="formData.numeroCar"
-                type="text"
-                placeholder="Número do CAR (opcional)"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              />
+               <!-- Sétima linha: Rua (3 colunas) e Número (1 coluna) -->
+               <div class="grid grid-cols-4 gap-4">
+                 <div class="col-span-3">
+                   <input
+                     v-model="formData.rua"
+                     type="text"
+                     placeholder="Rua"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                 </div>
+                 <div class="col-span-1">
+                   <input
+                     v-model="formData.numero"
+                     type="text"
+                     placeholder="Número"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                 </div>
+               </div>
 
-              <!-- Estado -->
-              <select
-                v-model="formData.estado"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              >
-                <option value="" disabled selected>Estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-              </select>
-
-              <!-- Cidade -->
-              <input
-                v-model="formData.cidade"
-                type="text"
-                placeholder="Cidade"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              />
-
-              <!-- CEP -->
-              <input
-                v-model="formData.cep"
-                type="text"
-                placeholder="CEP"
-                maxlength="9"
-                @input="formatCep"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              />
-
-              <!-- Número -->
-              <input
-                v-model="formData.numero"
-                type="text"
-                placeholder="Número"
-                class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-center focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-              />
+               <!-- Oitava linha: Latitude (1 coluna) e Longitude (1 coluna) -->
+               <div class="grid grid-cols-4 gap-4">
+                 <div class="col-span-2">
+                   <input
+                     v-model="formData.latitude"
+                     type="number"
+                     step="0.000001"
+                     placeholder="Latitude"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                 </div>
+                 <div class="col-span-2">
+                   <input
+                     v-model="formData.longitude"
+                     type="number"
+                     step="0.000001"
+                     placeholder="Longitude"
+                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                   />
+                 </div>
+               </div>
 
               <!-- Botão de envio -->
               <div class="text-center pt-6">
@@ -202,7 +264,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { motionPresets } from '@/plugins/motion'
 
 const formData = reactive({
@@ -216,8 +278,13 @@ const formData = reactive({
   estado: '',
   cidade: '',
   cep: '',
-  numero: ''
+  rua: '',
+  numero: '',
+  latitude: '',
+  longitude: ''
 })
+
+const isLoadingCep = ref(false)
 
 const formatCep = (event: Event) => {
   const target = event.target as HTMLInputElement
@@ -225,7 +292,33 @@ const formatCep = (event: Event) => {
   if (value.length > 5) {
     value = value.substring(0, 5) + '-' + value.substring(5, 8)
   }
+  if (value.length > 8) {
+    value = value.substring(0, 9) // Limita a 9 caracteres (5 dígitos + hífen + 3 dígitos)
+  }
   formData.cep = value
+  
+  // Buscar CEP quando tiver 8 dígitos (sem hífen)
+  if (value.replace(/\D/g, '').length === 8) {
+    buscarCep(value.replace(/\D/g, ''))
+  }
+}
+
+const buscarCep = async (cep: string) => {
+  isLoadingCep.value = true
+  try {
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    const data = await response.json()
+    
+    if (!data.erro) {
+      formData.cidade = data.localidade
+      formData.estado = data.uf
+      formData.rua = data.logradouro
+    }
+  } catch (error) {
+    console.error('Erro ao buscar CEP:', error)
+  } finally {
+    isLoadingCep.value = false
+  }
 }
 
 const formatTelefone = (event: Event) => {
@@ -270,7 +363,12 @@ const gerarTextoFormulario = () => {
   texto += `*Estado:* ${formData.estado}\n`
   texto += `*Cidade:* ${formData.cidade}\n`
   texto += `*CEP:* ${formData.cep}\n`
+  texto += `*Rua:* ${formData.rua}\n`
   texto += `*Número:* ${formData.numero}\n`
+  
+  if (formData.latitude && formData.longitude) {
+    texto += `*Coordenadas:* ${formData.latitude}, ${formData.longitude}\n`
+  }
   
   texto += `\n*DADOS PESSOAIS:*\n`
   texto += `*Nome:* ${formData.nomeCompleto}\n`

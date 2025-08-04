@@ -54,12 +54,12 @@
               </button>
               
               <button 
-                @click="scrollToContact"
+                @click="scrollToForm"
                 class="group relative overflow-hidden border-2 border-white text-white hover:text-primary font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
                 <span class="relative z-10 flex items-center justify-center gap-2">
                   <Icon icon="mdi:clipboard-check" class="w-5 h-5" />
-                  Quero Regularizar
+                  Solicitar Simulação
                 </span>
                 <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
@@ -221,6 +221,16 @@ const scrollToContact = () => {
   const contactSection = document.querySelector('#contato')
   if (contactSection) {
     contactSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+
+const scrollToForm = () => {
+  const formSection = document.querySelector('#simulacao')
+  if (formSection) {
+    formSection.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })

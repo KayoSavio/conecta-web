@@ -77,30 +77,14 @@
           <!-- Imagem 1: Pessoa em ambiente verde -->
           <div class="space-y-4">
             <div class="w-full h-80 bg-gradient-to-br from-green-400 to-green-600 rounded-lg relative overflow-hidden">
-              <!-- Simulação de pessoa em ambiente verde -->
-              <div class="absolute inset-0 bg-green-500 opacity-80"></div>
-              <div class="absolute bottom-4 left-4 w-16 h-24 bg-gray-300 rounded-full"></div>
-              <div class="absolute bottom-8 right-8 w-8 h-12 bg-green-700 rounded-full"></div>
-              <div class="absolute top-8 left-1/2 w-6 h-10 bg-green-600 rounded-full"></div>
-              <div class="absolute top-16 right-4 w-4 h-8 bg-green-800 rounded-full"></div>
+              <img src="@/assets/images/benefits/co2.jpg" alt="Cobenefícios" class="w-full h-full object-cover">
             </div>
           </div>
 
           <!-- Imagem 2: Vista de baixo para cima da floresta -->
           <div class="space-y-4">
             <div class="w-full h-80 bg-gradient-to-br from-green-700 to-green-900 rounded-lg relative overflow-hidden">
-              <!-- Simulação de vista de baixo para cima da floresta -->
-              <div class="absolute inset-0">
-                <!-- Troncos de árvores -->
-                <div class="absolute bottom-0 left-1/4 w-8 h-full bg-green-800"></div>
-                <div class="absolute bottom-0 left-1/2 w-6 h-full bg-green-700"></div>
-                <div class="absolute bottom-0 right-1/4 w-10 h-full bg-green-900"></div>
-                <div class="absolute bottom-0 right-1/3 w-4 h-full bg-green-800"></div>
-                <!-- Folhagem no topo -->
-                <div class="absolute top-0 left-0 right-0 h-1/2 bg-green-600 rounded-t-lg"></div>
-                <div class="absolute top-4 left-1/4 right-1/4 h-1/3 bg-green-500 rounded-full"></div>
-                <div class="absolute top-8 left-1/3 right-1/3 h-1/4 bg-green-400 rounded-full"></div>
-              </div>
+             <img src="@/assets/images/benefits/ecossistema.jpg" alt="Cobenefícios" class="w-full h-full object-cover">
             </div>
           </div>
         </div>

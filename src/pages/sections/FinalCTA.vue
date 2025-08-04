@@ -72,7 +72,7 @@
           </button>
           
           <button 
-            @click="scrollToContact"
+            @click="scrollToForm"
             class="group relative overflow-hidden border-2 border-white text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[200px]"
           >
             <span class="relative z-10 flex items-center justify-center gap-2">
@@ -146,6 +146,16 @@ const scrollToContact = () => {
   const contactSection = document.querySelector('#contato')
   if (contactSection) {
     contactSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+
+const scrollToForm = () => {
+  const formSection = document.querySelector('#simulacao')
+  if (formSection) {
+    formSection.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })

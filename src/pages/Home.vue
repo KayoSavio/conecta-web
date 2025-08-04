@@ -30,8 +30,7 @@
     <!-- 10. Monetização -->
     <Monetization />
     
-    <!-- 7. Testimonials -->
-    <Testimonials />
+    
     
     <!-- 8. Call to Action Final -->
     <FinalCTA />
@@ -52,7 +51,7 @@ import KeyActivities from '@/pages/sections/KeyActivities.vue'
 import Benefits from '@/pages/sections/Benefits.vue'
 import SimulationForm from '@/pages/sections/SimulationForm.vue'
 import Monetization from '@/pages/sections/Monetization.vue'
-import Testimonials from '@/pages/sections/Testimonials.vue'
+
 import FinalCTA from '@/pages/sections/FinalCTA.vue'
 import FooterInfo from '@/pages/sections/FooterInfo.vue'
 </script>

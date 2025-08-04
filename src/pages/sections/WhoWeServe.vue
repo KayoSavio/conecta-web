@@ -29,10 +29,10 @@
             Regularize sua propriedade e garanta conformidade ambiental com tecnologia avançada e suporte especializado.
           </p>
           <button 
-            @click="openWhatsApp"
+            @click="scrollToForm"
             class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group"
           >
-            Ver solução completa
+            Solicitar Simulação
             <Icon icon="mdi:arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
           </button>
         </div>
@@ -49,10 +49,10 @@
             Compense sua Reserva Legal de forma eficiente e segura, com monitoramento via satélite e documentação digital.
           </p>
           <button 
-            @click="openWhatsApp"
+            @click="scrollToForm"
             class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group"
           >
-            Quero regularizar
+            Solicitar Simulação
             <Icon icon="mdi:arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
           </button>
         </div>
@@ -128,6 +128,16 @@ const openWhatsApp = () => {
   const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
   const message = encodeURIComponent('Olá! Gostaria de saber mais sobre as soluções da CONECTA para meu perfil.')
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
+}
+
+const scrollToForm = () => {
+  const formSection = document.querySelector('#simulacao')
+  if (formSection) {
+    formSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
 }
 
 onMounted(() => {

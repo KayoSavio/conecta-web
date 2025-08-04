@@ -1,31 +1,47 @@
 <template>
-  <section class="section-padding bg-accent">
-    <div class="container-custom">
+  <section class="section-padding relative overflow-hidden">
+    <!-- Background com textura de árvore -->
+    <div class="absolute inset-0">
+      <img 
+        src="/src/assets/images/texture.jpg" 
+        alt="Textura de árvore" 
+        class="w-full h-full object-cover opacity-40"
+      />
+    </div>
+    <!-- Overlay sutil para melhorar contraste -->
+    <div class="absolute inset-0 bg-black/20"></div>
+    
+    <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">
         <!-- Título Principal -->
         <h2 
           v-motion="motionPresets.fadeInUp"
-          class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 uppercase tracking-wide"
+          class="text-4xl md:text-5xl font-bold text-white mb-12 uppercase tracking-wide"
         >
-          AGROFLORESTAS CL
+          Conecta Florestas
         </h2>
 
         <!-- Primeiro Parágrafo -->
         <p 
           v-motion="motionPresets.fadeInUp"
           :delay="200"
-          class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 text-left"
+          class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left"
         >
-          Estamos vivendo uma rede de crises interconectadas, sem precedentes, que incluem mudanças climáticas, problemas de saúde fatais, perda de biodiversidade, falta de renda para as comunidades rurais e preparação inadequada para as mudanças climáticas para a humanidade. A missão da Courageous Land é reverter as mudanças climáticas e, ao mesmo tempo, criar saúde e abundância para toda a vida na Terra. A implementação de sistemas agroflorestais pode atender a todos os Objetivos de Desenvolvimento Sustentável da ONU (UN SDGs) simultaneamente, e somos apaixonados por escalar essa solução o mais rápido possível.
+        Manter, gerir, preservar a maior área possível de Florestas em pé no Bioma Mata Atlântica.
+A plataforma fornecera diagnósticos, planejamento, mercado de terras, assistência técnica, assessoria na resolução de regularização fundiária de áreas de preservação ou similares conforme a Lei Ambiental que regente no país. 
+Sua função será transmitir a ideia de uma solução ambientalmente correta e positiva, enfatizando a conexão entre os produtores rurais ou empreendedores demandantes de áreas e fornecedores das mesmas, com uma função básica ser simples e direto, com fico na funcionalidade principal o atendimento as legislações vigentes.
+
+
         </p>
 
         <!-- Segundo Parágrafo -->
         <p 
           v-motion="motionPresets.fadeInUp"
           :delay="400"
-          class="text-lg md:text-xl text-gray-700 leading-relaxed text-left"
+          class="text-lg md:text-xl text-white leading-relaxed text-left"
         >
-          Agrofloresta é um termo genérico para sistemas de cultivo que integram em consórcios o plantio de árvores e alimentos. Isso pode variar de sistemas relativamente simples que têm 2 tipos de espécies cultivados, até sistemas muito complexos que têm muitas espécies e replicam um ambiente florestal natural. Desde 2011, focamos em sistemas que privilegiam a biodiversidade e ao mesmo tempo permitem a escalabilidade. Nossa meta é plantar mais de 100.000 hectares de agrofloresta nos próximos 10 anos.
+        Aumentar a confiabilidade nos processos de regularização fundiária e CAR aumentado significativamente de forma digital os processos de comercialização de áreas rurais destinadas a Reserva legal (matas), ou áreas similares de forma digital confiável, ágil e profissional. 
+        Melhorar de forma simples os processos de comercialização de áreas rurais destinadas a conservação ambiental afim de atender a legislação ambiental e as necessidades dos produtores rurais.
         </p>
       </div>
     </div>

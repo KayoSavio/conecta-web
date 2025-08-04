@@ -35,7 +35,7 @@
         <!-- CTA Buttons -->
         <div class="hidden lg:flex items-center space-x-3">
           <button 
-            @click="openWhatsApp"
+            @click="scrollToForm"
             class="group relative overflow-hidden bg-green-500 hover:bg-accent/90 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
           >
             <span class="relative z-10"> Solicitar Orçamento</span>
@@ -86,7 +86,7 @@
           
           <div class="pt-6 border-t border-gray-200 space-y-3">
             <button 
-              @click="scrollToContact"
+              @click="scrollToForm"
               class="w-full px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200 font-medium"
             >
               Solicitar Orçamento
@@ -115,8 +115,7 @@ const menuItems = [
   { id: 'inicio', label: 'Início', href: '#inicio' },
   { id: 'para-quem', label: 'Para Quem', href: '#para-quem' },
   { id: 'beneficios', label: 'Benefícios', href: '#beneficios' },
-  { id: 'monetizacao', label: 'Preços', href: '#monetizacao' },
-  { id: 'depoimentos', label: 'Depoimentos', href: '#depoimentos' }
+  { id: 'monetizacao', label: 'Preços', href: '#monetizacao' }
 ]
 
 const handleScroll = () => {
@@ -143,6 +142,17 @@ const scrollToContact = () => {
   const contactSection = document.querySelector('#contato')
   if (contactSection) {
     contactSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+  closeMobileMenu()
+}
+
+const scrollToForm = () => {
+  const formSection = document.querySelector('#simulacao')
+  if (formSection) {
+    formSection.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })
