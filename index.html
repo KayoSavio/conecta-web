@@ -5,6 +5,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Performance Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    
     <!-- SEO Meta Tags -->
     <title>CONECTA - Soluções Empresariais</title>
     <meta name="description" content="Soluções inovadoras para conectar seu negócio ao futuro. Especialistas em tecnologia e transformação digital." />
@@ -28,9 +32,22 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+    
+    <!-- Critical CSS inline -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      #app { min-height: 100vh; }
+      .container-custom { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      @media (min-width: 640px) { .container-custom { padding: 0 2rem; } }
+      @media (min-width: 1024px) { .container-custom { padding: 0 3rem; } }
+    </style>
   </head>
   <body>
     <div id="app"></div>

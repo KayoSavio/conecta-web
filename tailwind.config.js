@@ -7,11 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        accent: 'var(--color-accent)',
-        bg: 'var(--color-bg)',
-        text: 'var(--color-text)',
+        primary: '#22c55e',
+        secondary: '#10b981',
+        accent: '#059669',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -19,6 +17,7 @@ export default {
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+        'bounce-in': 'bounceIn 0.6s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -29,25 +28,20 @@ export default {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        bounceIn: {
+          '0%': { transform: 'scale(0.3)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
     },
   },
   plugins: [],
-  safelist: [
-    'bg-primary',
-    'bg-secondary', 
-    'bg-accent',
-    'text-primary',
-    'text-secondary',
-    'text-accent',
-    'border-primary',
-    'border-secondary',
-    'border-accent',
-    'hover:bg-primary',
-    'hover:bg-secondary',
-    'hover:bg-accent',
-    'hover:text-primary',
-    'hover:text-secondary',
-    'hover:text-accent',
-  ]
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
 } 

@@ -11,7 +11,7 @@
       />
     </div>
     <!-- Overlay sutil para melhorar contraste -->
-    <div class="absolute inset-0 bg-green-500/10"></div>
+    <div class="absolute inset-0  bg-blend-multiply bg-[url(https://img.freepik.com/fotos-premium/textura-de-fundo-da-floresta_35024-474.jpg)]  bg-green-500"></div>
     
     <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">
