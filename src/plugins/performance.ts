@@ -5,7 +5,7 @@ export default {
   install(app: App) {
     // Lazy load non-critical components
     app.config.globalProperties.$lazyLoad = (component: any) => {
-      return () => import(component)
+      return () => import(/* @vite-ignore */ component)
     }
 
     // Intersection Observer for lazy loading
