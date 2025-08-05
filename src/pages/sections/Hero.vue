@@ -5,18 +5,19 @@
       <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-primary/30 z-10"></div>
       <picture>
         <source 
-          srcset="https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp 800w,
-                  https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp 1200w,
-                  https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp 1600w"
+          srcset="https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=75&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp 800w,
+                  https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=75&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp 1200w,
+                  https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=75&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp 1600w"
           type="image/webp"
         />
         <img 
           ref="backgroundImage"
-          src="https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1639618650311-59aa5840e695?q=75&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Floresta plantada e reflorestamento - Área de compensação ambiental"
           class="w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
           decoding="async"
+          fetchpriority="high"
         />
       </picture>
     </div>

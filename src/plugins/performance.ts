@@ -1,59 +1,62 @@
 import type { App } from 'vue'
 
-// Performance optimization plugin
 export default {
   install(app: App) {
-    // Lazy load non-critical components
-    app.config.globalProperties.$lazyLoad = (component: any) => {
-      return () => import(/* @vite-ignore */ component)
-    }
-
-    // Intersection Observer for lazy loading
-    if (typeof window !== 'undefined') {
-      const observerOptions = {
-        rootMargin: '50px 0px',
-        threshold: 0.1
-      }
-
-      const imageObserver = new IntersectionObserver((entries) => {
+    // Lazy load images
+    const lazyLoadImages = () => {
+      const images = document.querySelectorAll('img[data-src]')
+      const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.removeAttribute('data-src')
-              imageObserver.unobserve(img)
-            }
+            img.src = img.dataset.src || ''
+            img.classList.remove('lazy')
+            observer.unobserve(img)
           }
         })
-      }, observerOptions)
+      })
 
-      // Observe all lazy images
-      document.addEventListener('DOMContentLoaded', () => {
-        const lazyImages = document.querySelectorAll('img[data-src]')
-        lazyImages.forEach(img => imageObserver.observe(img))
+      images.forEach(img => imageObserver.observe(img))
+    }
+
+    // Optimize animations
+    const optimizeAnimations = () => {
+      const animatedElements = document.querySelectorAll('[data-animate]')
+      animatedElements.forEach(el => {
+        el.setAttribute('style', 'will-change: transform;')
       })
     }
 
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/src/assets/images/optimized/conectaLogo.webp',
-        '/src/assets/images/optimized/favicon.png'
+      const criticalImages = [
+        '/src/assets/images/conectaLogo.png',
+        '/src/assets/images/conectarLogoWhite.png'
       ]
 
-      criticalResources.forEach(resource => {
+      criticalImages.forEach(src => {
         const link = document.createElement('link')
         link.rel = 'preload'
-        link.as = resource.endsWith('.webp') ? 'image' : 'image'
-        link.href = resource
+        link.as = 'image'
+        link.href = src
         document.head.appendChild(link)
       })
     }
 
-    // Execute preload on mount
+    // Initialize performance optimizations
     if (typeof window !== 'undefined') {
-      window.addEventListener('load', preloadCriticalResources)
+      // Run after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          lazyLoadImages()
+          optimizeAnimations()
+          preloadCriticalResources()
+        })
+      } else {
+        lazyLoadImages()
+        optimizeAnimations()
+        preloadCriticalResources()
+      }
     }
   }
 } 

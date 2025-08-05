@@ -36,21 +36,39 @@
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+    <link rel="preload" href="/src/assets/images/conectaLogo.png" as="image" />
+    <link rel="preload" href="/src/assets/images/conectarLogoWhite.png" as="image" />
+    
+    <!-- Resource hints for better performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
     
     <!-- Critical CSS inline -->
     <style>
       /* Critical CSS for above-the-fold content */
-      body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      #app { min-height: 100vh; }
-      .container-custom { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-      @media (min-width: 640px) { .container-custom { padding: 0 2rem; } }
-      @media (min-width: 1024px) { .container-custom { padding: 0 3rem; } }
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      .loading { opacity: 0; transition: opacity 0.3s; }
+      .loaded { opacity: 1; }
     </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="loading"></div>
     <script type="module" src="/src/main.ts"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration)
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError)
+            })
+        })
+      }
+    </script>
   </body>
 </html> 

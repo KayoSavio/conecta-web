@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': resolve(__dirname, 'src'),
     },
   },
   build: {
@@ -17,34 +17,24 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-      },
-      mangle: {
-        toplevel: true,
       },
     },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['vue', 'vue-router'],
-          gsap: ['gsap'],
+          animations: ['@vueuse/motion'],
           icons: ['@iconify/vue'],
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
       },
     },
-    cssCodeSplit: true,
-    sourcemap: false,
     chunkSizeWarningLimit: 1000,
+  },
+  optimizeDeps: {
+    include: ['vue', 'vue-router', '@vueuse/motion', '@iconify/vue'],
   },
   server: {
     port: 3000,
-    open: true,
+    host: true,
   },
-  optimizeDeps: {
-    include: ['vue', 'vue-router', 'gsap', '@iconify/vue'],
-  },
-
 }) 

@@ -1,91 +1,44 @@
-import sharp from 'sharp';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const sharp = require('sharp')
+const fs = require('fs')
+const path = require('path')
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const inputDir = 'src/assets/images'
+const outputDir = 'src/assets/images/optimized'
 
-const imagesDir = path.join(__dirname, '../src/assets/images');
-const outputDir = path.join(__dirname, '../src/assets/images/optimized');
-
-// Criar diretório de saída se não existir
+// Create output directory if it doesn't exist
 if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir, { recursive: true });
+  fs.mkdirSync(outputDir, { recursive: true })
 }
 
-// Lista de imagens para otimizar
-const imagesToOptimize = [
-  'agricultor.jpg',
-  'fazendeiro.png',
-  'fazendeiro2.png',
-  'image1.jpg',
-  'conectaLogo.png',
-  'conectarLogoWhite.png',
-  'iconWhite.png'
-];
+// Get all image files
+const imageFiles = fs.readdirSync(inputDir).filter(file => 
+  /\.(jpg|jpeg|png|webp)$/i.test(file)
+)
 
-async function optimizeImage(inputPath, outputPath, options = {}) {
+async function optimizeImage(filename) {
+  const inputPath = path.join(inputDir, filename)
+  const outputPath = path.join(outputDir, filename.replace(/\.(jpg|jpeg|png)$/i, '.webp'))
+  
   try {
-    const image = sharp(inputPath);
+    await sharp(inputPath)
+      .webp({ quality: 80 })
+      .toFile(outputPath)
     
-    // Aplicar otimizações
-    if (options.resize) {
-      image.resize(options.resize.width, options.resize.height, {
-        fit: 'inside',
-        withoutEnlargement: true
-      });
-    }
-    
-    if (options.quality) {
-      image.jpeg({ quality: options.quality });
-    }
-    
-    if (options.webp) {
-      await image.webp({ quality: 80 }).toFile(outputPath.replace(/\.[^.]+$/, '.webp'));
-    }
-    
-    await image.toFile(outputPath);
-    console.log(`✅ Otimizada: ${path.basename(inputPath)}`);
+    console.log(`✅ Optimized: ${filename}`)
   } catch (error) {
-    console.error(`❌ Erro ao otimizar ${inputPath}:`, error.message);
+    console.error(`❌ Error optimizing ${filename}:`, error)
   }
 }
 
+// Process all images
 async function optimizeAllImages() {
-  console.log('🚀 Iniciando otimização de imagens...\n');
+  console.log('🔄 Starting image optimization...')
   
-  for (const imageName of imagesToOptimize) {
-    const inputPath = path.join(imagesDir, imageName);
-    const outputPath = path.join(outputDir, imageName);
-    
-    if (!fs.existsSync(inputPath)) {
-      console.log(`⚠️  Arquivo não encontrado: ${imageName}`);
-      continue;
-    }
-    
-    const ext = path.extname(imageName).toLowerCase();
-    let options = {};
-    
-    // Configurações específicas por tipo de imagem
-    if (ext === '.jpg' || ext === '.jpeg') {
-      options = {
-        quality: 80,
-        webp: true,
-        resize: { width: 1200, height: 800 }
-      };
-    } else if (ext === '.png') {
-      options = {
-        webp: true,
-        resize: { width: 800, height: 600 }
-      };
-    }
-    
-    await optimizeImage(inputPath, outputPath, options);
+  for (const file of imageFiles) {
+    await optimizeImage(file)
   }
   
-  console.log('\n✨ Otimização concluída!');
-  console.log(`📁 Imagens otimizadas salvas em: ${outputDir}`);
+  console.log('✅ Image optimization complete!')
 }
 
-optimizeAllImages().catch(console.error); 
+optimizeAllImages() 
