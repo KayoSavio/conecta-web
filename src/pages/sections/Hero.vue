@@ -12,9 +12,9 @@
     </div>
     
     <!-- Content Container -->
-    <div class="relative z-20 container-custom px-6 py-24">
+    <div class="relative z-20 container-custom px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
       <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <!-- Text Content -->
           <div class="space-y-8 text-white">
             <!-- Badge -->
@@ -23,16 +23,16 @@
             <!-- Main Title -->
             <h1 
               ref="heroTitle"
-              class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-2xl"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-2xl"
             >
               Transformamos sua propriedade em um 
-              <span class="bg-green-500  bg-clip-text text-transparent">ativo ambiental lucrativo</span> e regularizado
+              <span class="bg-green-500 bg-clip-text text-transparent">ativo ambiental lucrativo</span> e regularizado
             </h1>
             
             <!-- Subtitle -->
             <p 
               ref="heroSubtitle"
-              class="text-xl md:text-2xl text-white/95 leading-relaxed max-w-2xl drop-shadow-2xl"
+              class="text-lg sm:text-xl md:text-2xl text-white/95 leading-relaxed max-w-2xl drop-shadow-2xl"
             >
               Plataforma digital que simplifica a regularização e compensação ambiental com tecnologia avançada e suporte especializado.
             </p>

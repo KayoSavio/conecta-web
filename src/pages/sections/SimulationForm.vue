@@ -20,7 +20,7 @@
         </div>
 
         <!-- Layout em duas colunas -->
-        <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           <!-- Imagem -->
           <div 
             v-motion="motionPresets.fadeIn"
@@ -55,24 +55,24 @@
             class="bg-white flex items-center"
           >
             <form @submit.prevent="handleSubmit" class="space-y-4">
-              <!-- Primeira linha: Tipo de Interesse (2 colunas) e Objetivo do Crédito (2 colunas) -->
-              <div class="grid grid-cols-4 gap-4">
-                <div class="col-span-2">
-                                     <select
-                     v-model="formData.tipoInteresse"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                     required
-                   >
+              <!-- Primeira linha: Tipo de Interesse e Objetivo do Crédito -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <select
+                    v-model="formData.tipoInteresse"
+                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    required
+                  >
                     <option value="" disabled selected>Tipo de Interesse</option>
                     <option value="vender">Vender área</option>
                     <option value="comprar">Comprar área</option>
                   </select>
                 </div>
-                <div class="col-span-2">
-                                     <select
-                     v-model="formData.objetivoCredito"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                   >
+                <div>
+                  <select
+                    v-model="formData.objetivoCredito"
+                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                  >
                     <option value="" disabled selected>Objetivo do Crédito</option>
                     <option value="compensacao">Compensação ambiental</option>
                     <option value="comercializacao">Comercialização</option>
@@ -80,40 +80,38 @@
                 </div>
               </div>
 
-              <!-- Segunda linha: Nome completo (4 colunas) -->
-              <div class="grid grid-cols-4 gap-4">
-                <div class="col-span-4">
-                                     <input
-                     v-model="formData.nomeCompleto"
-                     type="text"
-                     placeholder="Nome completo"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                     required
-                   />
-                </div>
+              <!-- Segunda linha: Nome completo -->
+              <div>
+                <input
+                  v-model="formData.nomeCompleto"
+                  type="text"
+                  placeholder="Nome completo"
+                  class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                  required
+                />
               </div>
 
-              <!-- Terceira linha: E-mail (2 colunas) e Telefone (2 colunas) -->
-              <div class="grid grid-cols-4 gap-4">
-                <div class="col-span-2">
-                                     <input
-                     v-model="formData.email"
-                     type="email"
-                     placeholder="E-mail"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                     required
-                   />
+              <!-- Terceira linha: E-mail e Telefone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <input
+                    v-model="formData.email"
+                    type="email"
+                    placeholder="E-mail"
+                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    required
+                  />
                 </div>
-                <div class="col-span-2">
-                                     <input
-                     v-model="formData.telefone"
-                     type="text"
-                     placeholder="Telefone (WhatsApp)"
-                     maxlength="15"
-                     @input="formatTelefone"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
-                     required
-                   />
+                <div>
+                  <input
+                    v-model="formData.telefone"
+                    type="text"
+                    placeholder="Telefone (WhatsApp)"
+                    maxlength="15"
+                    @input="formatTelefone"
+                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    required
+                  />
                 </div>
               </div>
 
@@ -121,24 +119,23 @@
               
 
                              
-               <div class="grid grid-cols-6 gap-4">
-                 
-                                   <div class="col-span-2 relative">
-                    <input
-                      v-model="formData.cep"
-                      type="text"
-                      placeholder="CEP"
-                      maxlength="9"
-                      @input="formatCep"
-                      :disabled="isLoadingCep"
-                      class="w-full px-4 py-4 pr-12 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200 disabled:opacity-50"
-                    />
-                    <div v-if="isLoadingCep" class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                      <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-500"></div>
-                    </div>
-                  </div>
-                 <div class="col-span-2">
-                                     <input
+               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                 <div class="relative">
+                   <input
+                     v-model="formData.cep"
+                     type="text"
+                     placeholder="CEP"
+                     maxlength="9"
+                     @input="formatCep"
+                     :disabled="isLoadingCep"
+                     class="w-full px-4 py-4 pr-12 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200 disabled:opacity-50"
+                   />
+                   <div v-if="isLoadingCep" class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                     <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-500"></div>
+                   </div>
+                 </div>
+                 <div>
+                   <input
                      v-model="formData.tamanhoArea"
                      type="number"
                      min="0"
@@ -146,20 +143,20 @@
                      placeholder="Área (hectare)"
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
-                </div>
-                <div class="col-span-2">
-                                     <input
+                 </div>
+                 <div>
+                   <input
                      v-model="formData.numeroCar"
                      type="text"
                      placeholder="CAR (opcional)"
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
-                </div>
+                 </div>
                </div>
 
-               <!-- Sexta linha: Cidade (4 colunas) -->
-               <div class="grid grid-cols-4 gap-4">
-                 <div class="col-span-2">
+               <!-- Quinta linha: Cidade e Estado -->
+               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                 <div>
                    <input
                      v-model="formData.cidade"
                      type="text"
@@ -167,7 +164,7 @@
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
-                 <div class="col-span-2">
+                 <div>
                    <select
                      v-model="formData.estado"
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
@@ -204,9 +201,9 @@
                  </div>
                </div>
 
-               <!-- Sétima linha: Rua (3 colunas) e Número (1 coluna) -->
-               <div class="grid grid-cols-4 gap-4">
-                 <div class="col-span-3">
+               <!-- Sexta linha: Rua e Número -->
+               <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                 <div class="sm:col-span-3">
                    <input
                      v-model="formData.rua"
                      type="text"
@@ -214,7 +211,7 @@
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
-                 <div class="col-span-1">
+                 <div class="sm:col-span-1">
                    <input
                      v-model="formData.numero"
                      type="text"
@@ -224,9 +221,9 @@
                  </div>
                </div>
 
-               <!-- Oitava linha: Latitude (1 coluna) e Longitude (1 coluna) -->
-               <div class="grid grid-cols-4 gap-4">
-                 <div class="col-span-2">
+               <!-- Sétima linha: Latitude e Longitude -->
+               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                 <div>
                    <input
                      v-model="formData.latitude"
                      type="number"
@@ -235,7 +232,7 @@
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
-                 <div class="col-span-2">
+                 <div>
                    <input
                      v-model="formData.longitude"
                      type="number"

@@ -3,7 +3,7 @@
     <!-- Background com textura do solo com plantas -->
     <div class="absolute inset-0">
       <img 
-        src="https://img.freepik.com/fotos-gratis/textura-do-solo-com-plantas_23-2147625797.jpg" 
+        src="https://img.freepik.com/fotos-premium/textura-de-fundo-da-floresta_35024-474.jpg" 
         alt="Textura do solo com plantas" 
         class="w-full h-full object-cover opacity-30"
         loading="lazy"
@@ -11,7 +11,7 @@
       />
     </div>
     <!-- Overlay sutil para melhorar contraste -->
-    <div class="absolute inset-0 bg-green-500/20"></div>
+    <div class="absolute inset-0 bg-green-500/10"></div>
     
     <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">
@@ -29,10 +29,7 @@
           :delay="200"
           class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left"
         >
-        Manter, gerir, preservar a maior área possível de Florestas em pé no Bioma Mata Atlântica.
-A plataforma fornecera diagnósticos, planejamento, mercado de terras, assistência técnica, assessoria na resolução de regularização fundiária de áreas de preservação ou similares conforme a Lei Ambiental que regente no país. 
-Sua função será transmitir a ideia de uma solução ambientalmente correta e positiva, enfatizando a conexão entre os produtores rurais ou empreendedores demandantes de áreas e fornecedores das mesmas, com uma função básica ser simples e direto, com fico na funcionalidade principal o atendimento as legislações vigentes.
-
+        Conservar, administrar e proteger a maior extensão possível de Florestas em sua forma natural nos Biomas do Brasil. A plataforma oferecerá diagnósticos, estratégias, negociação de terrenos, suporte técnico, e consultoria na regularização de propriedades de preservação ou semelhantes conforme a legislação ambiental vigente no país. Seu objetivo será transmitir a noção de uma solução ecologicamente responsável e benéfica, destacando a relação entre os agricultores ou empreendedores que buscam terrenos e os provedores desses espaços, com a premissa básica de ser clara e direta, focando na função fundamental de cumprir as leis atuais.
 
         </p>
 
@@ -42,8 +39,7 @@ Sua função será transmitir a ideia de uma solução ambientalmente correta e 
           :delay="400"
           class="text-lg md:text-xl text-white leading-relaxed text-left"
         >
-        Aumentar a confiabilidade nos processos de regularização fundiária e CAR aumentado significativamente de forma digital os processos de comercialização de áreas rurais destinadas a Reserva legal (matas), ou áreas similares de forma digital confiável, ágil e profissional. 
-        Melhorar de forma simples os processos de comercialização de áreas rurais destinadas a conservação ambiental afim de atender a legislação ambiental e as necessidades dos produtores rurais.
+        Aumentar a confiança nos procedimentos de regularização de propriedade e no Cadastro Ambiental Rural, colocando em prática de maneira digital os processos de transação de terrenos rurais destinados a reservas legais (florestas) ou áreas equivalentes de forma confiável, rápida e profissional. Simplificar os trâmites de comercialização de terrenos rurais voltados à preservação ambiental, a fim de alinhar-se à legislação ambiental e às exigências dos agricultores.
         </p>
       </div>
     </div>

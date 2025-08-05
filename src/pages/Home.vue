@@ -3,34 +3,37 @@
     <!-- 1. Hero Section -->
     <Hero />
     
-    <!-- 2. Para quem é a plataforma? -->
+    <!-- 2. Empresas Parceiras -->
+    <Partners />
+    
+    <!-- 3. Para quem é a plataforma? -->
     <WhoWeServe />
     
-    <!-- 3. Nossa Abordagem Única -->
+    <!-- 4. Nossa Abordagem Única -->
     <UniqueApproach />
     
-    <!-- 4. Processo em 4 Etapas -->
+    <!-- 5. Processo em 4 Etapas -->
     <ProcessSteps />
     
-    <!-- 5. AGROFLORESTAS CL -->
+    <!-- 6. AGROFLORESTAS CL -->
     <AgroforestryCL />
     
-    <!-- 6. OS COBENEFÍCIOS INCLUEM -->
+    <!-- 7. OS COBENEFÍCIOS INCLUEM -->
     <Cobenefits />
     
-    <!-- 7. MATA ATLÂNTICA -->
+    <!-- 8. MATA ATLÂNTICA -->
     <MataAtlantica />
     
-    <!-- 8. Funcionalidades Principais -->
+    <!-- 9. Funcionalidades Principais -->
     <!-- <KeyActivities /> -->
     
-    <!-- 9. Benefícios -->
+    <!-- 10. Benefícios -->
     <Benefits />
     
-    <!-- 10. Formulário de Simulação -->
+    <!-- 11. Formulário de Simulação -->
     <SimulationForm />
     
-    <!-- 11. Monetização -->
+    <!-- 12. Monetização -->
     <Monetization />
     
     
@@ -45,6 +48,7 @@
 
 <script setup lang="ts">
 import Hero from '@/pages/sections/Hero.vue'
+import Partners from '@/pages/sections/Partners.vue'
 import WhoWeServe from '@/pages/sections/WhoWeServe.vue'
 import UniqueApproach from '@/pages/sections/UniqueApproach.vue'
 import ProcessSteps from '@/pages/sections/ProcessSteps.vue'

@@ -1,7 +1,7 @@
 <template>
   <section class="section-padding bg-white">
     <div class="container-custom">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <!-- Lado Esquerdo: Título e Lista -->
         <div 
           v-motion="motionPresets.fadeInUp"
@@ -72,11 +72,11 @@
         <div 
           v-motion="motionPresets.fadeInUp"
           :delay="400"
-          class="grid grid-cols-2 gap-4"
+          class="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
           <!-- Imagem 1: Vista de árvores verdes da floresta com CO2 -->
           <div class="space-y-4">
-            <div class="w-full h-80 bg-gradient-to-br from-green-400 to-green-600 rounded-lg relative overflow-hidden">
+            <div class="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-green-400 to-green-600 rounded-lg relative overflow-hidden">
               <img 
                 src="https://img.freepik.com/fotos-gratis/vista-de-arvores-verdes-da-floresta-com-co2_23-2149675039.jpg" 
                 alt="Vista de árvores verdes da floresta com CO2" 
@@ -89,7 +89,7 @@
 
           <!-- Imagem 2: Pessoas plantando árvores no campo -->
           <div class="space-y-4">
-            <div class="w-full h-80 bg-gradient-to-br from-green-700 to-green-900 rounded-lg relative overflow-hidden">
+            <div class="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-green-700 to-green-900 rounded-lg relative overflow-hidden">
               <img 
                 src="https://img.freepik.com/fotos-gratis/pessoas-plantando-arvores-no-campo_23-2149401241.jpg" 
                 alt="Pessoas plantando árvores no campo" 

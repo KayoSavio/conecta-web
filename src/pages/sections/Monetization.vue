@@ -28,7 +28,7 @@
             <Icon icon="mdi:percent" class="w-8 h-8 text-green-600" />
           </div>
           <h3 class="text-xl font-semibold text-gray-800 mb-4">Taxa sobre Negociação</h3>
-          <div class="text-3xl font-bold text-green-600 mb-4">3,5% - 7%</div>
+          <div class="text-3xl font-bold text-green-600 mb-4">3,5% - 10%</div>
           <p class="text-gray-600 leading-relaxed mb-6">
             Taxa variável sobre o valor das transações de compensação ambiental realizadas na plataforma.
           </p>

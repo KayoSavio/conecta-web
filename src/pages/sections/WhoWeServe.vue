@@ -16,21 +16,21 @@
       </div>
 
       <!-- Grid de Públicos -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         <!-- Produtores Rurais -->
         <div 
-          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-            <Icon icon="mdi:tractor" class="w-8 h-8 text-green-600" />
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+            <Icon icon="mdi:tractor" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Produtores Rurais</h3>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Produtores Rurais</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
             Regularize sua propriedade e garanta conformidade ambiental com tecnologia avançada e suporte especializado.
           </p>
           <button 
             @click="scrollToForm"
-            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group"
+            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group text-sm sm:text-base"
           >
             Solicitar Simulação
             <Icon icon="mdi:arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
