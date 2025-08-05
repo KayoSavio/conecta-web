@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-primary text-white">
-    <div class="container-custom py-8 sm:py-12">
+    <div class="container-custom py-12 sm:py-16 px-4 sm:px-6">
       <div class="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
         <!-- Company Info -->
         <div 
@@ -9,7 +9,7 @@
         >
           <h3 class="text-xl font-bold">
             <!-- TODO: Substituir pelo nome oficial -->
-            <img src="@/assets/images/conectarLogoWhite.png" alt="Conecta Florestas" class=" h-16">
+            <img src="@/assets/images/conectarLogoWhite.png" alt="Conecta Florestas" class="h-12 sm:h-14 lg:h-16 w-auto">
           </h3>
           <p class="text-gray-300 leading-relaxed">
             <!-- TODO: Substituir pela descrição oficial -->

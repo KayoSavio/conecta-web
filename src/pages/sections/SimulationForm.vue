@@ -5,13 +5,13 @@
         <!-- Título -->
         <div class="text-center mb-12">
           <h2 
-            v-motion="motionPresets.fadeInUp"
+            v-motion="motionPresets.fadeInUpOnView"
             class="text-3xl font-bold text-gray-800 mb-2"
           >
             Solicitar Simulação
           </h2>
           <p 
-            v-motion="motionPresets.fadeInUp"
+            v-motion="motionPresets.fadeInUpOnView"
             :delay="100"
             class="text-gray-500 text-sm"
           >
@@ -23,11 +23,11 @@
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           <!-- Imagem -->
           <div 
-            v-motion="motionPresets.fadeIn"
+            v-motion="motionPresets.fadeInOnView"
             :delay="200"
             class="hidden lg:block h-full"
           >
-            <div class="relative h-full min-h-[600px]">
+            <div class="relative h-full min-h-[500px] lg:min-h-[600px]">
               <div class="absolute inset-0 bg-gradient-to-br from-green-400 via-green-500 to-blue-600 rounded-3xl shadow-2xl overflow-hidden">
                 <!-- Imagem de fundo -->
                 <div class="absolute inset-0 bg-black/50"></div>
@@ -39,9 +39,9 @@
                 
                 <!-- Overlay com conteúdo -->
                 <div class="absolute inset-0 flex items-end justify-start">
-                  <div class="text-white p-8">
-                    <h3 class="text-4xl font-bold mb-3">Crédito de Carbono</h3>
-                    <p class="text-lg opacity-90 max-w-sm">Transforme sua área em oportunidade sustentável e gere valor ambiental</p>
+                  <div class="text-white p-4 sm:p-6 lg:p-8">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Crédito de Carbono</h3>
+                    <p class="text-sm sm:text-base lg:text-lg opacity-90 max-w-sm">Transforme sua área em oportunidade sustentável e gere valor ambiental</p>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
 
           <!-- Formulário Minimalista -->
           <div 
-            v-motion="motionPresets.fadeIn"
+            v-motion="motionPresets.fadeInOnView"
             :delay="300"
             class="bg-white flex items-center"
           >

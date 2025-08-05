@@ -24,21 +24,16 @@
     <!-- 8. MATA ATLÂNTICA -->
     <MataAtlantica />
     
-    <!-- 9. Funcionalidades Principais -->
-    <!-- <KeyActivities /> -->
-    
-    <!-- 10. Benefícios -->
+    <!-- 9. Benefícios -->
     <Benefits />
     
-    <!-- 11. Formulário de Simulação -->
+    <!-- 10. Formulário de Simulação -->
     <SimulationForm />
     
-    <!-- 12. Monetização -->
+    <!-- 11. Monetização -->
     <Monetization />
     
-    
-    
-    <!-- 8. Call to Action Final -->
+    <!-- 12. Call to Action Final -->
     <FinalCTA />
     
     <!-- Footer -->
@@ -55,11 +50,9 @@ import ProcessSteps from '@/pages/sections/ProcessSteps.vue'
 import AgroforestryCL from '@/pages/sections/AgroforestryCL.vue'
 import Cobenefits from '@/pages/sections/Cobenefits.vue'
 import MataAtlantica from '@/pages/sections/MataAtlantica.vue'
-import KeyActivities from '@/pages/sections/KeyActivities.vue'
 import Benefits from '@/pages/sections/Benefits.vue'
 import SimulationForm from '@/pages/sections/SimulationForm.vue'
 import Monetization from '@/pages/sections/Monetization.vue'
-
 import FinalCTA from '@/pages/sections/FinalCTA.vue'
 import FooterInfo from '@/pages/sections/FooterInfo.vue'
 </script>

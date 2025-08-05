@@ -4,8 +4,8 @@
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <!-- Lado Esquerdo: Bento Grid -->
         <div 
-          v-motion="motionPresets.fadeIn"
-          class="relative "
+          v-motion="motionPresets.fadeInOnView"
+          class="relative order-2 lg:order-1"
         >
             <!-- <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
               <img 
@@ -87,8 +87,8 @@
 
         <!-- Lado Direito: Texto -->
         <div 
-          v-motion="motionPresets.fadeIn"
-          class="space-y-8"
+          v-motion="motionPresets.fadeInOnView"
+          class="space-y-8 order-1 lg:order-2"
         >
           <!-- Título e Subtítulo -->
           <div class="space-y-4">
@@ -118,30 +118,30 @@
             <div class="space-y-4">
               <h3 class="text-xl font-bold text-gray-800">Regularização Ambiental é Necessária para:</h3>
               <ul class="space-y-2">
-                <li class="flex items-start space-x-3">
-                  <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <span>Registro no Incra</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <span>Transferência de propriedade</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <span>Averbação de Reserva Legal e APP</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <span>Obtenção de Crédito Rural</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <span>Inscrição no Cadastro Ambiental Rural (CAR)</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <span>Emissão do Certificado de Cadastro de Imóvel Rural (CCIR)</span>
-                </li>
+                                 <li class="flex items-start space-x-3 group">
+                   <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                   <span>Registro no Incra</span>
+                 </li>
+                 <li class="flex items-start space-x-3 group">
+                   <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                   <span>Transferência de propriedade</span>
+                 </li>
+                 <li class="flex items-start space-x-3 group">
+                   <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                   <span>Averbação de Reserva Legal e APP</span>
+                 </li>
+                 <li class="flex items-start space-x-3 group">
+                   <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                   <span>Obtenção de Crédito Rural</span>
+                 </li>
+                 <li class="flex items-start space-x-3 group">
+                   <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                   <span>Inscrição no Cadastro Ambiental Rural (CAR)</span>
+                 </li>
+                 <li class="flex items-start space-x-3 group">
+                   <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                   <span>Emissão do Certificado de Cadastro de Imóvel Rural (CCIR)</span>
+                 </li>
               </ul>
             </div>
 

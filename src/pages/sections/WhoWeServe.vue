@@ -4,11 +4,14 @@
       <!-- Header -->
       <div class="text-center mb-16">
         <h2 
+          v-motion="motionPresets.fadeInUpOnView"
           class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6"
         >
           Para quem é a plataforma?
         </h2>
         <p 
+          v-motion="motionPresets.fadeInUpOnView"
+          :delay="100"
           class="text-xl text-gray-600 max-w-3xl mx-auto"
         >
           Nossa plataforma atende diferentes perfis que precisam de regularização e compensação ambiental
@@ -19,10 +22,12 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         <!-- Produtores Rurais -->
         <div 
+          v-motion="motionPresets.fadeInUpOnView"
+          :delay="200"
           class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
           <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-            <Icon icon="mdi:tractor" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
+            <Icon icon="mdi:tractor" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
           <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Produtores Rurais</h3>
           <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
@@ -39,18 +44,20 @@
 
         <!-- Empresas que precisam compensar RL -->
         <div 
-          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+          v-motion="motionPresets.fadeInUpOnView"
+          :delay="300"
+          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-            <Icon icon="mdi:office-building" class="w-8 h-8 text-green-600" />
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+            <Icon icon="mdi:office-building" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Empresas</h3>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Empresas</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
             Compense sua Reserva Legal de forma eficiente e segura, com monitoramento via satélite e documentação digital.
           </p>
           <button 
             @click="scrollToForm"
-            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group"
+            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group text-sm sm:text-base"
           >
             Solicitar Simulação
             <Icon icon="mdi:arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -59,18 +66,20 @@
 
         <!-- Investidores -->
         <div 
-          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+          v-motion="motionPresets.fadeInUpOnView"
+          :delay="400"
+          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-            <Icon icon="mdi:chart-line" class="w-8 h-8 text-green-600" />
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+            <Icon icon="mdi:chart-line" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Investidores</h3>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Investidores</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
             Invista em projetos ambientais certificados com retorno garantido e impacto positivo na preservação.
           </p>
           <button 
             @click="openWhatsApp"
-            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group"
+            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group text-sm sm:text-base"
           >
             Conhecer oportunidades
             <Icon icon="mdi:arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -79,18 +88,20 @@
 
         <!-- Órgãos Ambientais -->
         <div 
-          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+          v-motion="motionPresets.fadeInUpOnView"
+          :delay="500"
+          class="who-we-serve-card group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-            <Icon icon="mdi:shield-check" class="w-8 h-8 text-green-600" />
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+            <Icon icon="mdi:shield-check" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Órgãos Ambientais</h3>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Órgãos Ambientais</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
             Acesse dados transparentes e relatórios detalhados para fiscalização e gestão ambiental eficiente.
           </p>
           <button 
             @click="openWhatsApp"
-            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group"
+            class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors duration-200 group text-sm sm:text-base"
           >
             Solicitar acesso
             <Icon icon="mdi:arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -100,6 +111,8 @@
 
       <!-- CTA Section -->
       <div 
+        v-motion="motionPresets.fadeInUpOnView"
+        :delay="600"
         class="mt-16 text-center"
       >
         <div class="bg-green-500 rounded-2xl p-8 text-white">
@@ -123,6 +136,7 @@
 import { Icon } from '@iconify/vue'
 import { ref, onMounted } from 'vue'
 import gsap from '@/plugins/gsap'
+import { motionPresets } from '@/plugins/motion'
 
 const openWhatsApp = () => {
   const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'

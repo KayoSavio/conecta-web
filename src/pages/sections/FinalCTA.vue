@@ -11,7 +11,7 @@
       <div class="text-center max-w-4xl mx-auto">
         <!-- Main Content -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           class="mb-12"
         >
           <h2 
@@ -30,33 +30,33 @@
 
         <!-- Statistics -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="200"
-          class="grid md:grid-cols-3 gap-8 mb-12"
+          class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12"
         >
           <div class="text-center">
-            <div class="text-4xl font-bold text-white mb-2">
+            <div class="text-3xl sm:text-4xl font-bold text-white mb-2">
               <AnimatedNumber :to="500" :duration="2000" :formatter="(value: number) => `${value}+`" />
             </div>
-            <div class="text-white/80">Clientes Atendidos</div>
+            <div class="text-sm sm:text-base text-white/80">Clientes Atendidos</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-white mb-2">
+            <div class="text-3xl sm:text-4xl font-bold text-white mb-2">
               <AnimatedNumber :to="25" :duration="2000" :formatter="(value: number) => `${value}+`" />
             </div>
-            <div class="text-white/80">Anos de Experiência</div>
+            <div class="text-sm sm:text-base text-white/80">Anos de Experiência</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-white mb-2">
+            <div class="text-3xl sm:text-4xl font-bold text-white mb-2">
               <AnimatedNumber :to="98" :duration="2000" :formatter="(value: number) => `${value}%`" />
             </div>
-            <div class="text-white/80">Taxa de Sucesso</div>
+            <div class="text-sm sm:text-base text-white/80">Taxa de Sucesso</div>
           </div>
         </div>
 
         <!-- CTA Buttons -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="400"
           class="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
@@ -85,17 +85,17 @@
 
         <!-- Trust Indicators -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="600"
           class="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/80"
         >
-          <div class="flex items-center gap-2">
-            <Icon icon="mdi:shield-check" class="w-5 h-5 text-yellow-300" />
+          <div class="flex items-center gap-2 group">
+            <Icon icon="mdi:shield-check" class="w-5 h-5 text-yellow-300 group-hover:scale-110 transition-transform duration-300" />
             <span class="text-sm">Certificação Ambiental</span>
           </div>
           
-          <div class="flex items-center gap-2">
-            <Icon icon="mdi:gavel" class="w-5 h-5 text-yellow-300" />
+          <div class="flex items-center gap-2 group">
+            <Icon icon="mdi:gavel" class="w-5 h-5 text-yellow-300 group-hover:scale-110 transition-transform duration-300" />
             <span class="text-sm">Conformidade Legal</span>
           </div>
           
@@ -112,7 +112,7 @@
 
         <!-- Urgency Message -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="800"
           class="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
         >

@@ -4,12 +4,12 @@
       <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <!-- Lado Esquerdo: Título e Lista -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           class="space-y-8"
         >
           <!-- Título Principal -->
           <h2 
-            v-motion="motionPresets.fadeInUp"
+            v-motion="motionPresets.fadeInUpOnView"
             class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-wide"
           >
             OS COBENEFÍCIOS INCLUEM
@@ -17,52 +17,52 @@
 
           <!-- Lista de Benefícios -->
           <div 
-            v-motion="motionPresets.fadeInUp"
+            v-motion="motionPresets.fadeInUpOnView"
             :delay="200"
             class="space-y-4"
           >
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Remoção de CO2</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Recuperação de ecossistemas</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Resiliência contra as mudanças climáticas</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Saúde dos consumidores</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Habitat para espécies vegetais, animais e fungos de grande biodiversidade; retardando a extinção e gerando créditos de biodiversidade</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Regeneração da vida & fertilidade dos solos</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Geração de renda rural e valorização da vida no campo como alternativa ao crescimento desordenado nas cidades</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Retenção e ciclagem da água</span>
             </div>
             
-            <div class="flex items-start space-x-3">
-              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+            <div class="flex items-start space-x-3 group">
+              <Icon icon="mdi:check-circle" class="w-6 h-6 text-green-500 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
               <span class="text-gray-700 leading-relaxed">Ciclagem dos nutrientes</span>
             </div>
           </div>
@@ -70,7 +70,7 @@
 
         <!-- Lado Direito: Imagens -->
         <div 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="400"
           class="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >

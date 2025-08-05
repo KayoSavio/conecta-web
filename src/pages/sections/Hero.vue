@@ -12,7 +12,7 @@
     </div>
     
     <!-- Content Container -->
-    <div class="relative z-20 container-custom px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
+    <div class="relative z-20 container-custom px-4 sm:px-8 lg:px-12 py-20 sm:py-24 lg:py-32">
       <div class="max-w-7xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <!-- Text Content -->
@@ -23,7 +23,7 @@
             <!-- Main Title -->
             <h1 
               ref="heroTitle"
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-2xl"
+              class="p-4 pb-0 sm:p-0 text-3xl  md:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-2xl"
             >
               Transformamos sua propriedade em um 
               <span class="bg-green-500 bg-clip-text text-transparent">ativo ambiental lucrativo</span> e regularizado
@@ -32,7 +32,7 @@
             <!-- Subtitle -->
             <p 
               ref="heroSubtitle"
-              class="text-lg sm:text-xl md:text-2xl text-white/95 leading-relaxed max-w-2xl drop-shadow-2xl"
+              class="text-lg sm:text-xl md:text-2xl text-white/95 leading-relaxed max-w-2xl drop-shadow-2xl px-4 sm:px-0"
             >
               Plataforma digital que simplifica a regularização e compensação ambiental com tecnologia avançada e suporte especializado.
             </p>
@@ -40,7 +40,7 @@
             <!-- CTA Buttons -->
             <div 
               ref="heroCTA"
-              class="flex flex-col sm:flex-row w-full items-center sm:justify-center lg:justify-start gap-4"
+              class="p-4 pb-0 sm:p-0 flex flex-col sm:flex-row w-full items-center sm:justify-center lg:justify-start gap-4"
             >
               <button 
                 @click="openWhatsApp"
@@ -66,7 +66,7 @@
             </div>
             
             <!-- Social Media Links -->
-            <div class="flex items-center gap-4 mt-6">
+            <div class="p-4 sm:p-0 py-0 flex items-center gap-4 mt-6">
               <a 
                 href="https://x.com/conectafloresta" 
                 target="_blank" 
@@ -107,7 +107,7 @@
           <!-- Visual Element / Image -->
           <div 
             ref="visualCard"
-            class="flex justify-center lg:justify-end"
+            class="flex justify-center lg:justify-end p-4 sm:p-0"
           >
             <div class="relative w-full max-w-md">
               <!-- Modern Glassmorphism Card -->
@@ -208,7 +208,7 @@
                   <!-- Floating Elements -->
                   <div class="absolute top-4 right-4 w-4 h-4 bg-green-400/40 rounded-full animate-pulse"></div>
                   <div class="absolute bottom-4 left-4 w-3 h-3 bg-emerald-400/50 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                  <div class="absolute top-1/2 right-2 w-2 h-2 bg-blue-400/60 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                  <div class="absolute top-1/2 right-2 w-2 h-2 bg-green-400/60 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
                 </div>
               </div>
             </div>
@@ -237,8 +237,8 @@
 
                   <!-- Incubadora -->
                   <div class="w-full flex-shrink-0 flex justify-center">
-                    <div class="h-12 opacity-60 transition-opacity duration-300">
-                      <div class="w-48 h-full rounded flex items-center justify-center">
+                    <div class="h-10 sm:h-12 opacity-60 transition-opacity duration-300">
+                      <div class="w-32 sm:w-40 md:w-48 h-full rounded flex items-center justify-center">
                         <img src="@/assets/images/incubadora.png" alt="Incubadora IF" class="h-full w-auto object-contain">
                       </div>
                     </div>
@@ -246,8 +246,8 @@
 
                   <!-- CFTA -->
                   <div class="w-full flex-shrink-0 flex justify-center">
-                    <div class="h-12 opacity-60 transition-opacity duration-300">
-                      <div class="w-64 h-full rounded flex items-center justify-center">
+                    <div class="h-10 sm:h-12 opacity-60 transition-opacity duration-300">
+                      <div class="w-40 sm:w-48 md:w-56 lg:w-64 h-full rounded flex items-center justify-center">
                         <img src="@/assets/images/cftaLogo.png" alt="CFTA logo" class="h-full w-auto object-contain">
                       </div>
                     </div>
@@ -255,8 +255,8 @@
 
                   <!-- Cresci -->
                   <div class="w-full flex-shrink-0 flex justify-center">
-                    <div class="h-12 opacity-60 transition-opacity duration-300">
-                      <div class="w-56 h-full rounded flex items-center justify-center">
+                    <div class="h-10 sm:h-12 opacity-60 transition-opacity duration-300">
+                      <div class="w-36 sm:w-44 md:w-48 lg:w-56 h-full rounded flex items-center justify-center">
                         <img src="@/assets/images/cresci.png" alt="Cresci logo" class="h-full w-auto object-contain">
                       </div>
                     </div>
@@ -292,10 +292,10 @@
     <div 
       v-motion="motionPresets.fadeInUp"
       :delay="200"
-      class="flex justify-center items-center gap-8 md:gap-12 lg:gap-16 flex-wrap"
+      class="flex justify-center items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 flex-wrap"
     > 
       <!-- Sicredi -->
-      <div class="h-8 md:h-10 opacity-60 hover:opacity-100 transition-opacity duration-300">
+      <div class="h-6 sm:h-8 md:h-10 opacity-60 hover:opacity-100 transition-opacity duration-300">
         <svg width="145" height="34" viewBox="0 0 145 34" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto fill-white">
           <path d="M25.1965 15.2486C24.2035 16.0664 23.4636 16.2027 23.1326 15.8717C22.9185 15.6575 22.8795 15.2292 23.0353 14.684C23.561 12.9511 23.9698 11.1988 24.3008 9.42702C26.2868 8.55086 28.2728 7.73311 30.4729 7.51894C29.441 10.3421 27.5524 13.2821 25.1965 15.2486ZM24.184 21.0702C22.9379 20.8171 22.3538 20.272 22.3928 19.7852C22.4122 19.4737 22.7043 19.1622 23.2105 18.948C24.7681 18.286 26.3063 17.5656 27.7665 16.6894C29.6941 17.624 31.5438 18.8117 33.0235 20.3109C30.3172 21.3234 26.9877 21.6544 24.184 21.0702ZM19.0439 24.1465C18.4403 22.9004 18.4987 22.0438 18.8881 21.7517C19.1607 21.557 19.589 21.5959 20.0758 21.8685C21.5945 22.7252 23.1326 23.504 24.7681 24.1465C24.7681 24.1465 24.7681 24.1465 24.7681 24.166C25.3522 26.5024 25.7027 28.9557 25.5469 31.37C22.8406 29.6566 20.3873 26.9308 19.0439 24.1465ZM13.2223 21.9075C13.9037 20.5445 14.6241 20.0188 15.1109 20.1746C15.4419 20.272 15.6755 20.6419 15.7534 21.2455C16.026 23.1536 16.4349 25.0227 16.9216 26.8724C15.2277 29.1504 13.417 31.3505 11.1389 33.1418C10.8858 29.4619 11.5868 25.2369 13.2223 21.9075ZM11.4699 15.6186C13.0081 15.307 13.8453 15.5602 14.04 16.0469C14.1568 16.3584 14.0011 16.7868 13.5727 17.2541C12.1319 18.7533 10.8079 20.3304 9.54238 21.9659H9.52291C6.42714 22.18 3.19508 22.0632 0.157715 21.3428C3.25349 18.7338 7.43959 16.4168 11.4699 15.6186ZM15.4029 10.5174C16.5517 11.5103 16.8632 12.2892 16.6101 12.7175C16.4349 12.9901 16.026 13.1264 15.4029 13.068C13.3391 12.8343 11.2752 12.737 9.19192 12.737C7.22542 10.4784 5.43416 7.96676 4.28541 5.26039C8.19893 6.13655 12.4045 7.96676 15.4029 10.5174ZM21.5166 10.5952C21.5166 11.9971 21.1272 12.698 20.6599 12.737C20.3484 12.7759 19.9979 12.5228 19.6669 12.0166C18.6155 10.3811 17.4668 8.80398 16.2402 7.26583C16.7074 4.81257 17.4668 2.32038 18.7713 0.15918C20.4068 3.29389 21.5361 7.11006 21.5166 10.5952Z"></path>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M16.239 7.24661C16.7063 4.81283 17.4656 2.32064 18.7701 0.159439C15.9859 -0.229966 13.1237 0.101028 10.5147 1.07454C12.1113 2.63216 13.6884 4.20925 15.1097 5.90317C15.2757 6.10406 15.4534 6.31279 15.6288 6.51881C15.8444 6.77204 16.0565 7.02116 16.239 7.24661ZM25.0594 2.36028C24.9426 4.22942 24.8063 6.0791 24.5337 7.9093C24.5013 8.11212 24.4688 8.33183 24.4364 8.55155C24.3909 8.85915 24.3455 9.16676 24.3001 9.42798C26.286 8.55182 28.272 7.73407 30.4721 7.5199C29.0898 5.43658 27.2401 3.66479 25.0594 2.36028ZM32.9049 13.1462C31.6393 14.1392 30.3348 15.1127 28.9524 15.9499C28.7762 16.0556 28.5921 16.1733 28.4089 16.2903L28.4088 16.2904C28.1873 16.4319 27.9673 16.5725 27.7647 16.6898C29.6923 17.6243 31.542 18.812 33.0217 20.3112C33.3722 17.8385 33.3527 15.6189 32.9049 13.1462ZM26.1083 24.6527C27.627 25.2174 29.2041 25.6457 30.7811 26.0351C29.4766 28.1379 27.6854 29.9876 25.5631 31.37C25.7189 28.9557 25.3684 26.5024 24.7843 24.166V24.1465C25.1076 24.292 25.5115 24.4375 25.8845 24.5719L25.8847 24.572L25.8848 24.572C25.9609 24.5994 26.0357 24.6263 26.1083 24.6527ZM19.3922 33.7646C18.6524 31.9928 17.9514 30.2015 17.3868 28.4103C17.3464 28.2789 17.3034 28.1424 17.2597 28.0039L17.2597 28.0036L17.2596 28.0035L17.2596 28.0034L17.2596 28.0034C17.1351 27.6085 17.006 27.1986 16.9195 26.8527C15.2256 29.1307 13.4149 31.3308 11.1563 33.1221C13.8822 33.9204 16.5496 34.2708 19.3922 33.7646ZM8.47152 23.4658C7.14754 25.3154 5.94039 27.3014 4.79164 29.2874C2.53309 27.0872 0.936531 24.3224 0.157721 21.3435C3.19508 22.0639 6.42714 22.1807 9.52292 21.9665H9.54239C9.34379 22.2352 9.12416 22.546 8.90454 22.8567L8.90438 22.857L8.90419 22.8572C8.75789 23.0642 8.6116 23.2712 8.47152 23.4658ZM0 13.3987C2.43378 13.1066 4.88704 12.8535 7.30135 12.7756C7.50564 12.7693 7.72039 12.7608 7.93601 12.7523L7.93616 12.7523C8.37808 12.7348 8.82359 12.7172 9.18996 12.7172C7.204 10.4782 5.4322 7.96649 4.28346 5.26013C2.12226 7.53815 0.642519 10.3808 0 13.3987Z"></path>
@@ -330,15 +330,13 @@
   <div class="fixed bottom-6 right-6 z-50">
     <button 
       @click="openWhatsApp"
-      class="group relative bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse"
+      class="group relative bg-green-500 hover:bg-green-900 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110"
       title="Falar no WhatsApp"
     >
-      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 text-white" fill="white" viewBox="0 0 24 24">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
       </svg>
       
-      <!-- Pulse Animation -->
-      <div class="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-75"></div>
       
       <!-- Tooltip -->
       <div class="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">

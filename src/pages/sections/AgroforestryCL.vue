@@ -17,7 +17,7 @@
       <div class="max-w-4xl mx-auto text-center">
         <!-- Título Principal -->
         <h2 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           class="text-4xl md:text-5xl font-bold text-white mb-12 uppercase tracking-wide"
         >
           Conecta Florestas
@@ -25,7 +25,7 @@
 
         <!-- Primeiro Parágrafo -->
         <p 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="200"
           class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left"
         >
@@ -35,7 +35,7 @@
 
         <!-- Segundo Parágrafo -->
         <p 
-          v-motion="motionPresets.fadeInUp"
+          v-motion="motionPresets.fadeInUpOnView"
           :delay="400"
           class="text-lg md:text-xl text-white leading-relaxed text-left"
         >

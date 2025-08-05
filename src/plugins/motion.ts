@@ -78,6 +78,50 @@ export const motionPresets = {
     initial: { opacity: 0, scale: 0.8 },
     enter: { opacity: 1, scale: 1 },
     transition: { duration: 800, ease: [0.16, 1, 0.3, 1] }
+  },
+
+  // Intersection Observer based animations
+  fadeInUpOnView: {
+    initial: { opacity: 0, y: 50 },
+    enter: { opacity: 1, y: 0 },
+    transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+    onView: { once: true, amount: 0.3 }
+  },
+  
+  fadeInOnView: {
+    initial: { opacity: 0 },
+    enter: { opacity: 1 },
+    transition: { duration: 400, ease: [0.16, 1, 0.3, 1] },
+    onView: { once: true, amount: 0.3 }
+  },
+  
+  slideInLeftOnView: {
+    initial: { opacity: 0, x: -50 },
+    enter: { opacity: 1, x: 0 },
+    transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+    onView: { once: true, amount: 0.3 }
+  },
+  
+  slideInRightOnView: {
+    initial: { opacity: 0, x: 50 },
+    enter: { opacity: 1, x: 0 },
+    transition: { duration: 600, ease: [0.16, 1, 0.3, 1] },
+    onView: { once: true, amount: 0.3 }
+  },
+  
+  scaleInOnView: {
+    initial: { opacity: 0, scale: 0.8 },
+    enter: { opacity: 1, scale: 1 },
+    transition: { duration: 500, ease: [0.16, 1, 0.3, 1] },
+    onView: { once: true, amount: 0.3 }
+  },
+
+  // Stagger animations on view
+  staggerOnView: {
+    initial: { opacity: 0, y: 30 },
+    enter: { opacity: 1, y: 0 },
+    transition: { duration: 600, ease: [0.16, 1, 0.3, 1], stagger: 0.1 },
+    onView: { once: true, amount: 0.3 }
   }
 }
 
