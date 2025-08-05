@@ -58,7 +58,9 @@
               <!-- Primeira linha: Tipo de Interesse e Objetivo do Crédito -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
+                  <label for="tipo-interesse" class="sr-only">Tipo de Interesse</label>
                   <select
+                    id="tipo-interesse"
                     v-model="formData.tipoInteresse"
                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                     required
@@ -69,7 +71,9 @@
                   </select>
                 </div>
                 <div>
+                  <label for="objetivo-credito" class="sr-only">Objetivo do Crédito</label>
                   <select
+                    id="objetivo-credito"
                     v-model="formData.objetivoCredito"
                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                   >
@@ -165,7 +169,9 @@
                    />
                  </div>
                  <div>
+                   <label for="estado" class="sr-only">Estado</label>
                    <select
+                     id="estado"
                      v-model="formData.estado"
                      class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    >

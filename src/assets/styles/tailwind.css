@@ -46,4 +46,9 @@
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
+  
+  /* Screen reader only - accessible but visually hidden */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  }
 } 

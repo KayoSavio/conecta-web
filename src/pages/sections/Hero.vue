@@ -51,13 +51,10 @@
             >
               <button 
                 @click="openWhatsApp"
-                class="group w-full relative overflow-hidden bg-accent hover:bg-accent/90 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg"
+                class="flex items-center gap-2 group w-full relative overflow-hidden bg-accent hover:bg-accent/90 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg"
               >
-                <span class="relative z-10 flex items-center justify-center gap-2">
                   <Icon icon="mdi:whatsapp" class="w-5 h-5" />
                   Falar com Especialista
-                </span>
-                <div class="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
               
               <button 
