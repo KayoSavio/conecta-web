@@ -36,7 +36,7 @@
         <div class="hidden lg:flex items-center space-x-3">
           <button 
             @click="scrollToForm"
-            class="group relative overflow-hidden bg-green-500 hover:bg-accent/90 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
+            class="group relative overflow-hidden  bg-accent hover:bg-accent/20 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
           >
             <span class="relative z-10"> Solicitar Orçamento</span>
             <div class="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -44,9 +44,9 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button 
+        <div 
           @click="toggleMobileMenu"
-          class="lg:hidden group relative p-3 rounded-xl transition-all duration-300"
+          class="lg:hidden group relative select-none p-3 rounded-xl transition-all duration-300 "
           :class="isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/20'"
         >
           <div class="relative w-6 h-6">
@@ -63,7 +63,7 @@
               :class="isMobileMenuOpen ? '-rotate-45 translate-y-2' : 'translate-y-4'"
             ></span>
           </div>
-        </button>
+        </div>
       </div>
 
       <!-- Mobile Menu -->

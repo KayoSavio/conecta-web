@@ -33,7 +33,7 @@
               class="p-4 pb-0 sm:p-0 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-2xl"
             >
               Transformamos sua propriedade em um 
-              <span class="bg-green-500 bg-clip-text text-transparent">ativo ambiental lucrativo</span> e regularizado
+              <span class="bg-accent bg-clip-text text-transparent">ativo ambiental lucrativo</span> e regularizado
             </h1>
             
             <!-- Subtitle -->
@@ -51,7 +51,7 @@
             >
               <button 
                 @click="openWhatsApp"
-                class="group w-full relative overflow-hidden bg-green-500 hover:bg-accent/90 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg"
+                class="group w-full relative overflow-hidden bg-accent hover:bg-accent/90 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg"
               >
                 <span class="relative z-10 flex items-center justify-center gap-2">
                   <Icon icon="mdi:whatsapp" class="w-5 h-5" />
@@ -77,6 +77,7 @@
               <a 
                 href="https://x.com/conectafloresta" 
                 target="_blank" 
+                aria-label="X"
                 rel="noopener noreferrer"
                 class="group flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               >
@@ -88,6 +89,7 @@
               <a 
                 href="https://www.linkedin.com/company/conecta-florestas/" 
                 target="_blank" 
+                aria-label="linkedin"
                 rel="noopener noreferrer"
                 class="group flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               >
@@ -99,6 +101,7 @@
               <a 
                 href="https://instagram.com/conecta_florestas" 
                 target="_blank" 
+                aria-label="Instagram"
                 rel="noopener noreferrer"
                 class="group flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
               >
@@ -181,7 +184,7 @@
                     <!-- Benefits List -->
                     <div class="space-y-4">
                       <div class="flex items-center gap-4 text-white/95 hover:text-white transition-colors duration-300 group">
-                        <div class="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:bg-green-500/30 transition-all duration-300 group-hover:scale-110">
+                        <div class="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center group-hover:bg-accent/30 transition-all duration-300 group-hover:scale-110">
                           <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                           </svg>
@@ -199,7 +202,7 @@
                       </div>
 
                       <div class="flex items-center gap-4 text-white/95 hover:text-white transition-colors duration-300 group">
-                        <div class="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:bg-green-500/30 transition-all duration-300 group-hover:scale-110">
+                        <div class="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center group-hover:bg-accent/30 transition-all duration-300 group-hover:scale-110">
                           <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                           </svg>
@@ -227,7 +230,7 @@
   <div class="fixed bottom-6 right-6 z-50">
     <button 
       @click="openWhatsApp"
-      class="group relative bg-green-500 hover:bg-green-900 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110"
+      class="group relative bg-accent hover:bg-green-900 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110"
       title="Falar no WhatsApp"
     >
       <svg class="w-6 h-6 text-white" fill="white" viewBox="0 0 24 24">

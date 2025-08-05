@@ -247,7 +247,7 @@
               <div class="text-center pt-6">
                 <button
                   type="submit"
-                  class="w-full bg-green-500 text-white px-6 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-all duration-200 shadow-md hover:shadow-lg"
+                  class="w-full bg-accent text-white px-6 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
                   Solicitar Simulação
                 </button>

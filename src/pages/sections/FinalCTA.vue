@@ -62,7 +62,7 @@
         >
           <button 
             @click="openWhatsApp"
-            class="group relative overflow-hidden bg-white text-primary font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg min-w-[200px]"
+            class="group relative overflow-hidden bg-white text-primary hover:text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg min-w-[200px]"
           >
             <span class="relative z-10 flex items-center justify-center gap-2">
               <Icon icon="mdi:whatsapp" class="w-5 h-5" />
@@ -73,7 +73,7 @@
           
           <button 
             @click="scrollToForm"
-            class="group relative overflow-hidden border-2 border-white text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[200px]"
+            class="group relative hover:text-green-800 overflow-hidden border-2 border-white text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl min-w-[200px]"
           >
             <span class="relative z-10 flex items-center justify-center gap-2">
               <Icon icon="mdi:clipboard-check" class="w-5 h-5" />

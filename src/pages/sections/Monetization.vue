@@ -22,9 +22,9 @@
         <div 
           v-motion="motionPresets.fadeInUpOnView"
           :delay="200"
-          class="group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+          class="group bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-6 sm:p-8 border border-emerald-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent/30 transition-colors duration-300">
             <Icon icon="mdi:percent" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
           <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Taxa sobre Negociação</h3>
@@ -48,7 +48,7 @@
           </ul>
           <button 
             @click="openWhatsApp"
-            class="mt-4 sm:mt-6 w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-300 font-medium text-sm sm:text-base"
+            class="mt-6 w-full bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-300 font-medium text-sm sm:text-base"
           >
             Ver planos
           </button>
@@ -60,7 +60,7 @@
           :delay="300"
           class="group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent/30 transition-colors duration-300">
             <Icon icon="mdi:calendar-month" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
           <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Planos de Assinatura</h3>

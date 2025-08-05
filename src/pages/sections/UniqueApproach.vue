@@ -31,7 +31,7 @@
               <Icon icon="mdi:shield-check" class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div>
-              <h4 class="text-lg font-semibold text-gray-800">Conformidade Garantida</h4>
+              <h3 class="text-lg font-semibold text-gray-800">Conformidade Garantida</h3>
               <p class="text-gray-600">100% de conformidade com a legislação ambiental</p>
             </div>
           </div>

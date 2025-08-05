@@ -26,7 +26,7 @@
           :delay="200"
           class="group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
         >
-          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent/30 transition-colors duration-300">
             <Icon icon="mdi:shield-check" class="w-6 h-6 sm:w-8 sm:h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
           </div>
           <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Segurança Total</h3>
