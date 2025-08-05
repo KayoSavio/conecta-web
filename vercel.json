@@ -42,16 +42,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1"
-    }
-  ],
-  "functions": {
-    "app/api/**/*.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 } 
