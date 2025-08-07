@@ -2,9 +2,7 @@
   <div class="min-h-screen">
     <!-- 1. Hero Section -->
     <Hero />
-    
-    <!-- 2. Empresas Parceiras -->
-    <Partners />
+
     
     <!-- 3. Para quem é a plataforma? -->
     <WhoWeServe />
@@ -43,7 +41,6 @@
 
 <script setup lang="ts">
 import Hero from '@/pages/sections/Hero.vue'
-import Partners from '@/pages/sections/Partners.vue'
 import WhoWeServe from '@/pages/sections/WhoWeServe.vue'
 import UniqueApproach from '@/pages/sections/UniqueApproach.vue'
 import ProcessSteps from '@/pages/sections/ProcessSteps.vue'
