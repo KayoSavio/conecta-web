@@ -139,8 +139,8 @@ import gsap from '@/plugins/gsap'
 import { motionPresets } from '@/plugins/motion'
 
 const openWhatsApp = () => {
-  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
-  const message = encodeURIComponent('Olá! Gostaria de saber mais sobre as soluções da CONECTA para meu perfil.')
+  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5528999710377'
+  const message = encodeURIComponent('Olá! Gostaria de saber mais sobre como a CONECTA pode me ajudar.')
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
 }
 

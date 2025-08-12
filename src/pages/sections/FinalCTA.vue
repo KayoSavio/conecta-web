@@ -137,8 +137,8 @@ import { motionPresets } from '@/plugins/motion'
 import AnimatedNumber from '@/components/ui/AnimatedNumber.vue'
 
 const openWhatsApp = () => {
-  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
-  const message = encodeURIComponent('Olá! Gostaria de começar minha regularização ambiental com a CONECTA. Preciso de ajuda urgente!')
+  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5528999710377'
+  const message = encodeURIComponent('Olá! Gostaria de falar com especialista da CONECTA sobre regularização ambiental.')
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
 }
 

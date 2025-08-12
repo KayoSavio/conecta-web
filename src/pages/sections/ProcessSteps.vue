@@ -21,7 +21,12 @@
         >
           <div class="w-full h-24 sm:h-32 lg:h-36 rounded-lg mb-3 sm:mb-4 flex items-center justify-center">
             <div class="w-full h-full rounded-lg relative">
-              <img src="@/assets/images/process-steps/step-1.png" alt="Diagnóstico" class="w-full h-full object-contain">
+              <img 
+                src="@/assets/images/process-steps/step-1.png" 
+                alt="Diagnóstico - Primeiro passo do processo" 
+                class="w-full h-full object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
           <div class="flex gap-2 sm:gap-4 items-center justify-start text-3xl sm:text-4xl lg:text-5xl font-bold text-green-500 mb-3 sm:mb-4">
@@ -42,7 +47,12 @@
           <div class="w-full h-24 sm:h-32 lg:h-36 rounded-lg mb-3 sm:mb-4 flex items-center justify-center relative">
             <div class="w-full h-full rounded-lg relative overflow-hidden">
               <!-- Simulação de agrofloresta 3D -->
-              <img src="@/assets/images/process-steps/step-2.png" alt="Diagnóstico" class="w-full h-full object-contain">
+              <img 
+                src="@/assets/images/process-steps/step-2.png" 
+                alt="Estratégia - Segundo passo do processo" 
+                class="w-full h-full object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
           <div class="flex gap-2 sm:gap-4 items-center justify-start text-3xl sm:text-4xl lg:text-5xl font-bold text-green-500 mb-3 sm:mb-4">
@@ -62,7 +72,12 @@
         >
           <div class="w-full h-24 sm:h-32 lg:h-36 rounded-lg mb-3 sm:mb-4 flex items-center justify-center">
             <div class="w-full h-full rounded-lg p-2">
-              <img src="@/assets/images/process-steps/step-3.png" alt="Diagnóstico" class="w-full h-full object-contain">
+              <img 
+                src="@/assets/images/process-steps/step-3.png" 
+                alt="Implementação - Terceiro passo do processo" 
+                class="w-full h-full object-contain"
+                loading="lazy"
+              />
               
             </div>
           </div>
@@ -83,7 +98,12 @@
         >
           <div class="w-full h-24 sm:h-32 lg:h-36 rounded-lg mb-3 sm:mb-4 flex items-center justify-center">
             <div class="w-full h-full rounded-lg p-2">
-              <img src="@/assets/images/process-steps/step-4.png" alt="Diagnóstico" class="w-full h-full object-contain">
+              <img 
+                src="@/assets/images/process-steps/step-4.png" 
+                alt="Monitoramento - Quarto passo do processo" 
+                class="w-full h-full object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
           <div class="flex gap-2 sm:gap-4 items-center justify-start text-3xl sm:text-4xl lg:text-5xl font-bold text-green-500 mb-3 sm:mb-4">

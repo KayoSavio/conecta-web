@@ -9,7 +9,12 @@
         >
           <h3 class="text-xl font-bold">
             <!-- TODO: Substituir pelo nome oficial -->
-            <img src="@/assets/images/conectarLogoWhite.png" alt="Conecta Florestas" class="h-12 sm:h-14 lg:h-16 w-auto">
+            <img 
+              src="@/assets/images/conectarLogoWhite.png" 
+              alt="Conecta Florestas" 
+              class="h-12 sm:h-14 lg:h-16 w-auto"
+              loading="lazy"
+            />
           </h3>
           <p class="text-gray-300 leading-relaxed">
             <!-- TODO: Substituir pela descrição oficial -->
@@ -46,11 +51,11 @@
         >
           <h3 class="text-lg font-semibold">Serviços</h3>
           <ul class="space-y-2 text-gray-300">
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Consultoria Estratégica</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Transformação Digital</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Otimização de Performance</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Gestão de Projetos</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Análise de Dados</a></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Consultoria Estratégica</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Transformação Digital</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Otimização de Performance</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Gestão de Projetos</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Análise de Dados</span></li>
           </ul>
         </div> -->
         
@@ -62,11 +67,11 @@
         >
           <h3 class="text-lg font-semibold">Empresa</h3>
           <ul class="space-y-2 text-gray-300">
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Sobre Nós</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Nossa História</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Equipe</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Carreiras</a></li>
-            <li><a href="#" class="hover:text-white transition-all duration-200 hover:scale-105">Blog</a></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Sobre Nós</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Nossa História</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Equipe</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Carreiras</span></li>
+            <li><span class="hover:text-white transition-all duration-200 hover:scale-105 cursor-default">Blog</span></li>
           </ul>
         </div> -->
         
@@ -117,12 +122,12 @@
             CNPJ: 43.335.343/0001-31
           </p>
           <!-- <div class="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" class="text-white hover:text-white text-sm transition-all duration-200 hover:scale-105">
+            <span class="text-white hover:text-white text-sm transition-all duration-200 hover:scale-105 cursor-default">
               Política de Privacidade
-            </a>
-            <a href="#" class="text-white hover:text-white text-sm transition-all duration-200 hover:scale-105">
+            </span>
+            <span class="text-white hover:text-white text-sm transition-all duration-200 hover:scale-105 cursor-default">
               Termos de Uso
-            </a>
+            </span>
           </div> -->
         </div>
         <!-- <div class="text-center">

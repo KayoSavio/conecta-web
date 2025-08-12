@@ -4,7 +4,7 @@
     <div class="absolute inset-0">
       <img 
         src="https://img.freepik.com/fotos-premium/textura-de-fundo-da-floresta_35024-474.jpg" 
-        alt="Textura do solo com plantas" 
+        alt="Textura do solo com plantas da floresta" 
         class="w-full h-full object-cover opacity-30"
         loading="lazy"
         decoding="async"

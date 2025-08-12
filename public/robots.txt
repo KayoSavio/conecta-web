@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://conecta.com.br/sitemap.xml
+Sitemap: https://conectaflorestas.com.br/sitemap.xml
 
 # TODO: Adicionar regras específicas se necessário
 # Disallow: /admin/

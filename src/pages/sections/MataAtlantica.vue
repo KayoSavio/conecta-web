@@ -22,7 +22,7 @@
             <div class="col-span-6 row-span-8 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img 
                 src="https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2020-05/serradomar_004.jpg" 
-                alt="Serra do Mar - Mata Atlântica" 
+                alt="Serra do Mar - Mata Atlântica - Paisagem natural preservada" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -34,7 +34,7 @@
               
               <img 
                 src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2024/02/29/istock-1142662804-1hvb2h3akz2ar.jpg" 
-                alt="Tucano na Mata Atlântica" 
+                alt="Tucano na Mata Atlântica - Ave símbolo da biodiversidade" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -45,7 +45,7 @@
             <div class="col-span-3 row-span-4 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img 
                 src="https://papelsemente.com.br/wp-content/uploads/2022/09/dia-da-mata-atlantica-o-que-vai-acontecer-dia-27-de-maio.jpg" 
-                alt="Dia da Mata Atlântica" 
+                alt="Dia da Mata Atlântica - Celebração da biodiversidade" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -56,7 +56,7 @@
             <div class="col-span-3 row-span-2 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img 
                 src="https://images.ecycle.com.br/wp-content/uploads/2022/12/17170822/mata-atlantica-tucano.jpg.webp" 
-                alt="Vegetação do Parque das Aves - Mata Atlântica" 
+                alt="Vegetação do Parque das Aves - Mata Atlântica preservada" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -65,7 +65,7 @@
             <div class="col-span-3 row-span-2 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img 
                 src="https://www.parquedasaves.com.br/wp-content/uploads/2019/08/vegetacao-Parque-das-Aves-Mata-Atlantica-3.jpg" 
-                alt="Vegetação do Parque das Aves - Mata Atlântica" 
+                alt="Vegetação do Parque das Aves - Mata Atlântica - Flora diversificada" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -76,7 +76,7 @@
             <div class="col-span-12 row-span-12 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ">
               <img 
                 src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/brazil/SACR090218_D006.JPG?crop=354%2C0%2C3543%2C2835&wid=600&hei=480&scl=5.90625" 
-                alt="Mata Atlântica - Nature Conservancy" 
+                alt="Mata Atlântica - Nature Conservancy - Conservação da biodiversidade" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"

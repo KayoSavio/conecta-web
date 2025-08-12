@@ -109,8 +109,8 @@ import { Icon } from '@iconify/vue'
 import { motionPresets } from '@/plugins/motion'
 
 const openWhatsApp = () => {
-  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
-  const message = encodeURIComponent('Olá! Gostaria de conhecer os benefícios da plataforma CONECTA.')
+  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5528999710377'
+  const message = encodeURIComponent('Olá! Gostaria de saber mais sobre os benefícios da CONECTA.')
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
 }
 </script> 

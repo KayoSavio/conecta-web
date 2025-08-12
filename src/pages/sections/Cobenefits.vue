@@ -79,11 +79,11 @@
             <div class="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-green-400 to-green-600 rounded-lg relative overflow-hidden">
               <img 
                 src="https://img.freepik.com/fotos-gratis/vista-de-arvores-verdes-da-floresta-com-co2_23-2149675039.jpg" 
-                alt="Vista de árvores verdes da floresta com CO2" 
+                alt="Vista de árvores verdes da floresta com CO2 - Benefícios ambientais" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
-              >
+              />
             </div>
           </div>
 
@@ -92,11 +92,11 @@
             <div class="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-green-700 to-green-900 rounded-lg relative overflow-hidden">
               <img 
                 src="https://img.freepik.com/fotos-gratis/pessoas-plantando-arvores-no-campo_23-2149401241.jpg" 
-                alt="Pessoas plantando árvores no campo" 
+                alt="Pessoas plantando árvores no campo - Reflorestamento ativo" 
                 class="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
-              >
+              />
             </div>
           </div>
         </div>

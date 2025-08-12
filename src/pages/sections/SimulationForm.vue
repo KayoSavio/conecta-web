@@ -35,6 +35,7 @@
                    src="/src/assets/images/agricultor.jpg"
                    alt="Agricultor brasileiro"
                    class="w-full h-full object-cover opacity-60"
+                   loading="lazy"
                  />
                 
                 <!-- Overlay com conteúdo -->
@@ -62,7 +63,7 @@
                   <select
                     id="tipo-interesse"
                     v-model="formData.tipoInteresse"
-                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                     required
                   >
                     <option value="" disabled selected>Tipo de Interesse</option>
@@ -75,7 +76,7 @@
                   <select
                     id="objetivo-credito"
                     v-model="formData.objetivoCredito"
-                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                   >
                     <option value="" disabled selected>Objetivo do Crédito</option>
                     <option value="compensacao">Compensação ambiental</option>
@@ -90,7 +91,7 @@
                   v-model="formData.nomeCompleto"
                   type="text"
                   placeholder="Nome completo"
-                  class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                  class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                   required
                 />
               </div>
@@ -102,7 +103,7 @@
                     v-model="formData.email"
                     type="email"
                     placeholder="E-mail"
-                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                     required
                   />
                 </div>
@@ -113,7 +114,7 @@
                     placeholder="Telefone (WhatsApp)"
                     maxlength="15"
                     @input="formatTelefone"
-                    class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                    class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                     required
                   />
                 </div>
@@ -132,7 +133,7 @@
                      maxlength="9"
                      @input="formatCep"
                      :disabled="isLoadingCep"
-                     class="w-full px-4 py-4 pr-12 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200 disabled:opacity-50"
+                     class="w-full px-4 py-4 pr-12 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200 disabled:opacity-50"
                    />
                    <div v-if="isLoadingCep" class="absolute right-3 top-1/2 transform -translate-y-1/2">
                      <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-500"></div>
@@ -145,7 +146,7 @@
                      min="0"
                      step="0.01"
                      placeholder="Área (hectare)"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                  <div>
@@ -153,7 +154,7 @@
                      v-model="formData.numeroCar"
                      type="text"
                      placeholder="CAR (opcional)"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                </div>
@@ -165,7 +166,7 @@
                      v-model="formData.cidade"
                      type="text"
                      placeholder="Cidade"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                  <div>
@@ -173,7 +174,7 @@
                    <select
                      id="estado"
                      v-model="formData.estado"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    >
                      <option value="" disabled selected>Estado</option>
                      <option value="AC">Acre</option>
@@ -214,7 +215,7 @@
                      v-model="formData.rua"
                      type="text"
                      placeholder="Rua"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                  <div class="sm:col-span-1">
@@ -222,7 +223,7 @@
                      v-model="formData.numero"
                      type="text"
                      placeholder="Número"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                </div>
@@ -235,7 +236,7 @@
                      type="number"
                      step="0.000001"
                      placeholder="Latitude"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                  <div>
@@ -244,7 +245,7 @@
                      type="number"
                      step="0.000001"
                      placeholder="Longitude"
-                     class="w-full px-4 py-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-500 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
+                     class="w-full px-4 py-4 bg-gray-200 rounded-lg text-gray-800 placeholder-gray-600 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:bg-white transition-all duration-200"
                    />
                  </div>
                </div>

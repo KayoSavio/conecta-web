@@ -14,8 +14,21 @@
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <div class="flex items-center space-x-3">
-          <img src="@/assets/images/conectarLogoWhite.png" alt="CONECTA" class="h-8 lg:h-12 w-auto" v-if="!isScrolled">
-          <img src="@/assets/images/conectaLogo.png" alt="CONECTA" class="h-8 lg:h-12 w-auto" v-else>
+          <img 
+            src="@/assets/images/conectarLogoWhite.png" 
+            alt="CONECTA Florestas" 
+            class="h-8 lg:h-12 w-auto" 
+            v-if="!isScrolled"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <img 
+            src="@/assets/images/conectaLogo.png" 
+            alt="CONECTA Florestas" 
+            class="h-8 lg:h-12 w-auto" 
+            v-else
+            loading="lazy"
+          />
         </div>
 
         <!-- Desktop Navigation -->
@@ -133,7 +146,7 @@ const closeMobileMenu = () => {
 }
 
 const openWhatsApp = () => {
-  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
+  const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5528999710377'
   const message = encodeURIComponent('Olá! Gostaria de saber mais sobre as soluções da CONECTA.')
   window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
 }
