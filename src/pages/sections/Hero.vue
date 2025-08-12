@@ -223,15 +223,15 @@
             </svg>
 
             <div class="text-center">
-              <img src="/src/assets/images/incubadora.png" alt="INCUBADORA Instituto Federal" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" />
+              <img src="/src/assets/images/incubadora.png" alt="INCUBADORA Instituto Federal" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" width="118" height="48" />
             </div>
 
             <div class="text-center">
-              <img src="/src/assets/images/cftaLogo.png" alt="CFTA Conselho Federal" class="w-full h-8 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" />
+              <img src="/src/assets/images/cftaLogo.png" alt="CFTA Conselho Federal" class="w-full h-8 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" width="200" height="24" />
             </div>
 
             <div class="text-center">
-              <img src="/src/assets/images/cresci.png" alt="CRECI-ES" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" />
+              <img src="/src/assets/images/cresci.png" alt="CRECI-ES" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" width="176" height="48" />
             </div>
         </div>
         </div>
@@ -250,15 +250,15 @@
               </svg>
 
               <div class="text-center">
-                <img src="/src/assets/images/incubadora.png" alt="INCUBADORA Instituto Federal" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" />
+                <img src="/src/assets/images/incubadora.png" alt="INCUBADORA Instituto Federal" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" width="118" height="48" />
               </div>
 
               <div class="text-center">
-                <img src="/src/assets/images/cftaLogo.png" alt="CFTA Conselho Federal" class="w-full h-8 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" />
+                <img src="/src/assets/images/cftaLogo.png" alt="CFTA Conselho Federal" class="w-full h-8 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" width="200" height="24" />
               </div>
 
               <div class="text-center">
-                <img src="/src/assets/images/cresci.png" alt="CRECI-ES" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" />
+                <img src="/src/assets/images/cresci.png" alt="CRECI-ES" class="w-full h-12 object-contain grayscale hover:grayscale-0 hover:opacity-100 opacity-60 mb-2" loading="lazy" width="176" height="48" />
               </div>
             </div>
         </div>

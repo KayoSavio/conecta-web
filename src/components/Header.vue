@@ -21,6 +21,8 @@
             v-if="!isScrolled"
             loading="eager"
             fetchpriority="high"
+            width="48"
+            height="48"
           />
           <img 
             src="@/assets/images/conectaLogo.png" 
@@ -28,6 +30,8 @@
             class="h-8 lg:h-12 w-auto" 
             v-else
             loading="lazy"
+            width="48"
+            height="48"
           />
         </div>
 

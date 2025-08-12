@@ -103,3 +103,79 @@ a:focus, button:focus {
 .transition-all {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 } 
+
+/* Otimizações de Performance */
+@layer base {
+  /* Prevenção de reflow forçado */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Otimização de imagens */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Prevenção de layout shift */
+  .aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+  }
+  
+  .aspect-ratio > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@layer components {
+  /* Componentes otimizados */
+  .container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Prevenção de reflow em animações */
+  .animate-safe {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Otimização de fontes */
+  .font-optimized {
+    font-display: swap;
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+}
+
+@layer utilities {
+  /* Utilitários de performance */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Otimização para mobile */
+  @media (max-width: 640px) {
+    .mobile-optimized {
+      contain: layout style paint;
+    }
+  }
+} 
