@@ -119,7 +119,7 @@
             © 2024 CONECTA. Todos os direitos reservados.
           </p>
           <p class="text-white text-xs">
-            CNPJ: 43.335.343/0001-31
+            CNPJ: 13.697.237/0001-15
           </p>
           <!-- <div class="flex space-x-6 mt-4 md:mt-0">
             <span class="text-white hover:text-white text-sm transition-all duration-200 hover:scale-105 cursor-default">

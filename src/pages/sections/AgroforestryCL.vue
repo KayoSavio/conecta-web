@@ -27,7 +27,7 @@
         <p 
           v-motion="motionPresets.fadeInUpOnView"
           :delay="200"
-          class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left"
+          class="text-lg md:text-xl text-justify text-white leading-relaxed mb-8 text-left"
         >
         Conservar, administrar e proteger a maior extensão possível de Florestas em sua forma natural nos Biomas do Brasil. A plataforma oferecerá diagnósticos, estratégias, negociação de terrenos, suporte técnico, e consultoria na regularização de propriedades de preservação ou semelhantes conforme a legislação ambiental vigente no país. Seu objetivo será transmitir a noção de uma solução ecologicamente responsável e benéfica, destacando a relação entre os agricultores ou empreendedores que buscam terrenos e os provedores desses espaços, com a premissa básica de ser clara e direta, focando na função fundamental de cumprir as leis atuais.
 
@@ -37,7 +37,7 @@
         <p 
           v-motion="motionPresets.fadeInUpOnView"
           :delay="400"
-          class="text-lg md:text-xl text-white leading-relaxed text-left"
+          class="text-lg md:text-xl text-white leading-relaxed text-justify"
         >
         Aumentar a confiança nos procedimentos de regularização de propriedade e no Cadastro Ambiental Rural, colocando em prática de maneira digital os processos de transação de terrenos rurais destinados a reservas legais (florestas) ou áreas equivalentes de forma confiável, rápida e profissional. Simplificar os trâmites de comercialização de terrenos rurais voltados à preservação ambiental, a fim de alinhar-se à legislação ambiental e às exigências dos agricultores.
         </p>
