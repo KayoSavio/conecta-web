@@ -86,7 +86,7 @@
             <h3 class="text-lg sm:text-xl font-bold text-gray-800">Gerenciar</h3>
           </div>
           <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-            Gerencie seu SAF profissionalmente com nosso Software de Inteligência Agroflorestal + Assistência Técnica CL presencial
+            Gerencie seu SAF profissionalmente com nosso Software de Inteligência Agroflorestal + Assistência Conecta
           </p>
         </div>
 
@@ -111,7 +111,7 @@
             <h3 class="text-lg sm:text-xl font-bold text-gray-800">Vender Produtos e Carbono</h3>
           </div>
           <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-            Venda seus produtos agroflorestais e créditos de carbono com a Courageous Land.
+            Venda seus produtos agroflorestais e créditos de carbono com a Conecta
           </p>
         </div>
       </div>
